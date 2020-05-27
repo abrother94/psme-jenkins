@@ -1,0 +1,34 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-05-26 05:25:33.242 UTC</timestamp>
+  <md5sum>8d3fabd645ea0a8d033cb81f5637abc9</md5sum>
+  <fileName>Credential id=b7b6d0ed-19cf-4936-81ac-f67f400f1e31 name=voltha/******</fileName>
+  <usages/>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.0">
+      <timestamp>1590543598076</timestamp>
+      <nodeName>Build_Server_172.17.10.64</nodeName>
+      <timestamp0>1590543229993</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.0">
+      <timestamp>1590543598842</timestamp>
+      <nodeName>Build_OPEN_OLT_RSD_PSME_64</nodeName>
+      <timestamp0>1590543229909</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.0">
+      <timestamp>1590543604971</timestamp>
+      <nodeName>Build_Server_172.17.10.60</nodeName>
+      <timestamp0>1590543237525</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.0">
+      <timestamp>1590543605069</timestamp>
+      <nodeName>Robot_PSME_Auto_Test_60</nodeName>
+      <timestamp0>1590543236822</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.0">
+      <timestamp>1590543605693</timestamp>
+      <nodeName>Build_RSD_PSME_60</nodeName>
+      <timestamp0>1590543238658</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>

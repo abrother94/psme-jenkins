@@ -1,0 +1,71 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>PLTFORM</name>
+          <description></description>
+          <value>asfvolt16</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>ONL_ID</name>
+          <description></description>
+          <value>f0bcb23</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>PSME_VER</name>
+          <description></description>
+          <value>2.1.3.59.25</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BAL_SDK_VER</name>
+          <description></description>
+          <value>3.5.3.3</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>MDATE</name>
+          <description></description>
+          <value>2020-05-20-PM-05-33-asfvolt16-3.5.3.3-2.1.3.59.25-f0bcb23</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>Build_PSME_ONLY</name>
+          <description>Only build PSEM only, set it to &quot;True&quot;
+This needs a well build ONL and BAL docker in env.</description>
+          <value>False</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>PLTFORM</string>
+        <string>ONL_ID</string>
+        <string>PSME_VER</string>
+        <string>BAL_SDK_VER</string>
+        <string>MDATE</string>
+        <string>Build_PSME_ONLY</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>voltha</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>47</queueId>
+  <timestamp>1589996268509</timestamp>
+  <startTime>1589996268518</startTime>
+  <result>SUCCESS</result>
+  <duration>297769</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>Build_Server_172.17.10.64</builtOn>
+  <workspace>/home/voltha/workspace/XGSPON/3_Install_Bal_Psme</workspace>
+  <hudsonVersion>2.190.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

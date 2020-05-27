@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2019-12-06 22:49:02.951 UTC</timestamp>
+  <md5sum>58a7017962e738bc3984c28debff9ece</md5sum>
+  <fileName>Credential id=4f601890-1338-41ea-913a-33a98efd3251 name=abrother94@gmail.com/******</fileName>
+  <usages>
+    <entry>
+      <string>5_RF_Auto_Test</string>
+      <ranges>1-9</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

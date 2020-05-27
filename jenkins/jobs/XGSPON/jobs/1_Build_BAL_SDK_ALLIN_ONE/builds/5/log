@@ -1,0 +1,49 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4Jxhojn983rLK0SLLn+It+6sWhi5xN0g0Q333Iwh7kVFAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYF/eT83ILSktQifafSzJyU+KBgl/iAYF/X+GAgw9DMFADTJt4f1QAAAA==[0mBuild_RSD_PSME_SSD_165 (ONL) in workspace /home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE
+[1_Build_BAL_SDK_ALLIN_ONE] $ /bin/bash /tmp/jenkins5658620660313883564.sh
+ONL_COMMIT_ID[f0bcb23]
+PLTFORM[asfvolt16]
+PSME_VER[2.1.3.59.25]
+BAL_SDK_VER[3.5.3.3]
+MDATE[2020-05-21-AM-09-00-asfvolt16-3.5.3.3-2.1.3.59.25-f0bcb23]
+COMMIT_ID[f0bcb23]
+PLT[asfvolt16]
+BAL_PLT_NAME[asfvolt16-bal]
+BAL_VER[3.5.3.3]
+FIT[False]
+BuildPSMEOnly[False]
+1[f0bcb23]
+2[asfvolt16]
+3[3.5.3.3]
+4[False]
+5[False]
+Kernel Version
+USERNAME[abrother]
+BAL3_RSD_213_CONTAINER_ID[16cccb9fb9df]
+BAL3_RSD_213
+BAL3_RSD_213
+TOP_DIR[/home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE]
+Cloning into 'BAL'...
+Cloning into 'bal-api-3.4.3.3'...
+SDK_DIR[/home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asfvolt16-bal]
+Switched to a new branch '3.5.3.3-dev'
+Branch 3.5.3.3-dev set up to track remote branch 3.5.3.3-dev from origin.
+BAL_VER[bal]
+Cloning into 'OpenNetworkLinux'...
+HEAD is now at f0bcb23 Merge pull request #708 from jostar-yang/asgvolt64_fgpa_20200327
+OLN_DIR[/home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asvolt-onl/OpenNetworkLinux]
+ONL_KERNEL_VERSION_FILE[/home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asvolt-onl/OpenNetworkLinux/packages/base/any/kernels/4.14-lts/kconfig.mk]
+Kernel ver[4-14-151]
+Cloning into 'RSD-Redfish'...
+fatal: unable to access 'https://nick_huang:password@/gitlab.edge-core.com/root/RSD-Redfish.git/': Could not resolve host: 
+./Build_BAL_SDK_ALL.sh: line 301: cd: RSD-Redfish/PSME/build: No such file or directory
+PSME_BUILD_DIR[/home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asvolt-onl/OpenNetworkLinux]
+d85472b8b5470c340c50d66d3ee98aed7bf172012d0c6978f65faa6ae6562cb0
+BAL_ONL_KERNEL_FILE[/home/abrother/jenkins/workspace/XGSPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asfvolt16-bal/host_customized/cmake/modules/asfvolt16.cmake]
+sudo: ./Build_ONL.sh: command not found
+sudo: ./pre-inst-X86-pkgs.sh: command not found
+pre install pkts error!!
+Build ERROR!!
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

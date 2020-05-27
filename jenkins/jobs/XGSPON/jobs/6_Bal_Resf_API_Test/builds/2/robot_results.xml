@@ -1,0 +1,118 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="robot@2.0.0">
+  <logFile>log.html</logFile>
+  <reportFile>report.html</reportFile>
+  <timeStamp>20200521 11:41:25.029</timeStamp>
+  <suites>
+    <entry>
+      <string>Bal Test</string>
+      <suite>
+        <duplicateSafeName>Bal Test</duplicateSafeName>
+        <logFile>log.html</logFile>
+        <reportFile>report.html</reportFile>
+        <id>s1</id>
+        <children>
+          <entry>
+            <string>Test Bal</string>
+            <suite>
+              <duplicateSafeName>Test Bal</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s1</id>
+              <children/>
+              <parent class="suite" reference="../../../.."/>
+              <name>Test Bal</name>
+              <description>Test BAL Rstful functionality.</description>
+              <caseResults>
+                <entry>
+                  <string>Verify Restful API for BAL Test</string>
+                  <case>
+                    <duplicateSafeName>Verify Restful API for BAL Test</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <id>s1-s1-t1</id>
+                    <passed>true</passed>
+                    <critical>true</critical>
+                    <name>Verify Restful API for BAL Test</name>
+                    <description>Test BAL Restful Status</description>
+                    <starttime>20200521 11:41:26.522</starttime>
+                    <endtime>20200521 11:42:07.122</endtime>
+                    <tags>
+                      <string>Test Bal Restful opertaion test</string>
+                    </tags>
+                    <parent reference="../../../.."/>
+                    <failedSince>0</failedSince>
+                  </case>
+                </entry>
+                <entry>
+                  <string>Verify Restful API for ONU Range Test</string>
+                  <case>
+                    <duplicateSafeName>Verify Restful API for ONU Range Test</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <id>s1-s1-t2</id>
+                    <passed>true</passed>
+                    <critical>true</critical>
+                    <name>Verify Restful API for ONU Range Test</name>
+                    <description>Test ONU Range</description>
+                    <starttime>20200521 11:42:07.123</starttime>
+                    <endtime>20200521 11:44:43.608</endtime>
+                    <tags>
+                      <string>Test ONU Rnage test</string>
+                    </tags>
+                    <parent reference="../../../.."/>
+                    <failedSince>0</failedSince>
+                  </case>
+                </entry>
+                <entry>
+                  <string>Verify Restful API for flow add</string>
+                  <case>
+                    <duplicateSafeName>Verify Restful API for flow add</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <id>s1-s1-t3</id>
+                    <passed>true</passed>
+                    <critical>true</critical>
+                    <name>Verify Restful API for flow add</name>
+                    <description>Test flow add</description>
+                    <starttime>20200521 11:44:43.609</starttime>
+                    <endtime>20200521 11:44:54.526</endtime>
+                    <tags>
+                      <string>Test Flow add</string>
+                    </tags>
+                    <parent reference="../../../.."/>
+                    <failedSince>0</failedSince>
+                  </case>
+                </entry>
+                <entry>
+                  <string>Verify Restful API for omci send</string>
+                  <case>
+                    <duplicateSafeName>Verify Restful API for omci send</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <id>s1-s1-t4</id>
+                    <passed>true</passed>
+                    <critical>true</critical>
+                    <name>Verify Restful API for omci send</name>
+                    <description>Test omci send</description>
+                    <starttime>20200521 11:44:54.527</starttime>
+                    <endtime>20200521 11:45:51.958</endtime>
+                    <tags>
+                      <string>Test omci send</string>
+                    </tags>
+                    <parent reference="../../../.."/>
+                    <failedSince>0</failedSince>
+                  </case>
+                </entry>
+              </caseResults>
+              <startTime>20200521 11:41:25.108</startTime>
+              <endTime>20200521 11:45:51.959</endTime>
+            </suite>
+          </entry>
+        </children>
+        <parent class="result" reference="../../../.."/>
+        <name>Bal Test</name>
+        <description></description>
+        <caseResults/>
+        <startTime>20200521 11:41:25.030</startTime>
+        <endTime>20200521 11:45:51.989</endTime>
+      </suite>
+    </entry>
+  </suites>
+</result>

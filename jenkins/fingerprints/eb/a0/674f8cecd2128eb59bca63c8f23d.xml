@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-05-26 05:25:33.479 UTC</timestamp>
+  <md5sum>eba0674f8cecd2128eb59bca63c8f23d</md5sum>
+  <fileName>Credential id=e1787563-3387-4548-a1f9-2ecd3812ec5b name=abrother/******</fileName>
+  <usages/>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.0">
+      <timestamp>1590543598076</timestamp>
+      <nodeName>Build_RSD_PSME_SSD_165</nodeName>
+      <timestamp0>1590543227336</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>
