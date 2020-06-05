@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200605 10:07:34.496" generator="Robot 3.1.1 (Python 2.7.12 on linux2)">
+<suite source="/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/bal_test" id="s1" name="Bal Test">
+<suite source="/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/bal_test/test_bal.robot" id="s1-s1" name="Test Bal">
+<test id="s1-s1-t1" name="Verify Restful API for BAL Test">
+<kw type="setup" name="Test Setup Execution">
+<doc>Do test case setup tasks.</doc>
+<kw name="redfish.Login">
+<msg timestamp="20200605 10:07:46.887" level="FAIL">No keyword with name 'redfish.Login' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.887" starttime="20200605 10:07:46.887"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.887" starttime="20200605 10:07:46.879"></status>
+</kw>
+<kw type="teardown" name="Test Teardown Execution">
+<doc>Do the post test teardown.</doc>
+<kw name="redfish.Logout">
+<msg timestamp="20200605 10:07:46.894" level="FAIL">No keyword with name 'redfish.Logout' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.894" starttime="20200605 10:07:46.894"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.894" starttime="20200605 10:07:46.887">No keyword with name 'redfish.Logout' found.</status>
+</kw>
+<doc>Test BAL Restful Status</doc>
+<tags>
+<tag>Test Bal Restful opertaion test</tag>
+</tags>
+<status status="FAIL" endtime="20200605 10:07:46.894" critical="yes" starttime="20200605 10:07:46.878">Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.</status>
+</test>
+<test id="s1-s1-t2" name="Verify Restful API for ONU Range Test">
+<kw type="setup" name="Test Setup Execution">
+<doc>Do test case setup tasks.</doc>
+<kw name="redfish.Login">
+<msg timestamp="20200605 10:07:46.902" level="FAIL">No keyword with name 'redfish.Login' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.902" starttime="20200605 10:07:46.902"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.903" starttime="20200605 10:07:46.895"></status>
+</kw>
+<kw type="teardown" name="Test Teardown Execution">
+<doc>Do the post test teardown.</doc>
+<kw name="redfish.Logout">
+<msg timestamp="20200605 10:07:46.951" level="FAIL">No keyword with name 'redfish.Logout' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.951" starttime="20200605 10:07:46.951"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.951" starttime="20200605 10:07:46.903">No keyword with name 'redfish.Logout' found.</status>
+</kw>
+<doc>Test ONU Range</doc>
+<tags>
+<tag>Test ONU Rnage test</tag>
+</tags>
+<status status="FAIL" endtime="20200605 10:07:46.951" critical="yes" starttime="20200605 10:07:46.895">Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.</status>
+</test>
+<test id="s1-s1-t3" name="Verify Restful API for flow add">
+<kw type="setup" name="Test Setup Execution">
+<doc>Do test case setup tasks.</doc>
+<kw name="redfish.Login">
+<msg timestamp="20200605 10:07:46.966" level="FAIL">No keyword with name 'redfish.Login' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.966" starttime="20200605 10:07:46.966"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.966" starttime="20200605 10:07:46.953"></status>
+</kw>
+<kw type="teardown" name="Test Teardown Execution">
+<doc>Do the post test teardown.</doc>
+<kw name="redfish.Logout">
+<msg timestamp="20200605 10:07:46.978" level="FAIL">No keyword with name 'redfish.Logout' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.978" starttime="20200605 10:07:46.978"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.978" starttime="20200605 10:07:46.966">No keyword with name 'redfish.Logout' found.</status>
+</kw>
+<doc>Test flow add</doc>
+<tags>
+<tag>Test Flow add</tag>
+</tags>
+<status status="FAIL" endtime="20200605 10:07:46.978" critical="yes" starttime="20200605 10:07:46.952">Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.</status>
+</test>
+<test id="s1-s1-t4" name="Verify Restful API for omci send">
+<kw type="setup" name="Test Setup Execution">
+<doc>Do test case setup tasks.</doc>
+<kw name="redfish.Login">
+<msg timestamp="20200605 10:07:46.989" level="FAIL">No keyword with name 'redfish.Login' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.989" starttime="20200605 10:07:46.989"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.990" starttime="20200605 10:07:46.980"></status>
+</kw>
+<kw type="teardown" name="Test Teardown Execution">
+<doc>Do the post test teardown.</doc>
+<kw name="redfish.Logout">
+<msg timestamp="20200605 10:07:46.997" level="FAIL">No keyword with name 'redfish.Logout' found.</msg>
+<status status="FAIL" endtime="20200605 10:07:46.997" starttime="20200605 10:07:46.997"></status>
+</kw>
+<status status="FAIL" endtime="20200605 10:07:46.997" starttime="20200605 10:07:46.990">No keyword with name 'redfish.Logout' found.</status>
+</kw>
+<doc>Test omci send</doc>
+<tags>
+<tag>Test omci send</tag>
+</tags>
+<status status="FAIL" endtime="20200605 10:07:46.997" critical="yes" starttime="20200605 10:07:46.979">Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.</status>
+</test>
+<doc>Test BAL Rstful functionality.</doc>
+<status status="FAIL" endtime="20200605 10:07:46.998" starttime="20200605 10:07:34.554"></status>
+</suite>
+<status status="FAIL" endtime="20200605 10:07:46.999" starttime="20200605 10:07:34.535"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="4" pass="0">Critical Tests</stat>
+<stat fail="4" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Test Bal Restful opertaion test</stat>
+<stat fail="1" pass="0">Test Flow add</stat>
+<stat fail="1" pass="0">Test omci send</stat>
+<stat fail="1" pass="0">Test ONU Rnage test</stat>
+</tag>
+<suite>
+<stat fail="4" id="s1" name="Bal Test" pass="0">Bal Test</stat>
+<stat fail="4" id="s1-s1" name="Test Bal" pass="0">Bal Test.Test Bal</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200605 10:07:46.102" level="ERROR">Error in file '/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish_resource.robot': Initializing test library 'bmc_redfish' with arguments [ https://:8888 | admin | redfish ] failed: RetriesExhaustedError
+Traceback (most recent call last):
+  File "/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish.py", line 41, in __init__
+    super(bmc_redfish, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/redfish/rest/v1.py", line 952, in __init__
+    max_retry=max_retry)
+  File "/usr/local/lib/python2.7/dist-packages/redfish/rest/v1.py", line 422, in __init__
+    self.get_root_object()
+  File "/usr/local/lib/python2.7/dist-packages/redfish/rest/v1.py", line 553, in get_root_object
+    raise excp</msg>
+<msg timestamp="20200605 10:07:46.113" level="ERROR">Error in file '/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish_resource.robot': Initializing test library 'bmc_redfish_utils' with no arguments failed: No library 'redfish' found.
+Traceback (most recent call last):
+  File "/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish_utils.py", line 19, in __init__
+    self._redfish_ = BuiltIn().get_library_instance('redfish')
+  File "/usr/local/lib/python2.7/dist-packages/robot/libraries/BuiltIn.py", line 3258, in get_library_instance
+    raise RuntimeError(unic(err))</msg>
+</errors>
+</robot>

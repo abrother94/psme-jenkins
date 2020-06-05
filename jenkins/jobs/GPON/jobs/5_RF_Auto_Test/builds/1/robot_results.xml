@@ -1,0 +1,987 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="robot@2.0.0">
+  <logFile>log.html</logFile>
+  <reportFile>report.html</reportFile>
+  <timeStamp>20200605 09:51:04.053</timeStamp>
+  <suites>
+    <entry>
+      <string>Redfish</string>
+      <suite>
+        <duplicateSafeName>Redfish</duplicateSafeName>
+        <logFile>log.html</logFile>
+        <reportFile>report.html</reportFile>
+        <id>s1</id>
+        <children>
+          <entry>
+            <string>1 Account Service</string>
+            <suite>
+              <duplicateSafeName>1 Account Service</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s2</id>
+              <children>
+                <entry>
+                  <string>Test User Account</string>
+                  <suite>
+                    <duplicateSafeName>Test User Account</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s2-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test User Account</name>
+                    <description>Test Redfish user account.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Redfish Create and Verify Users</string>
+                        <case>
+                          <duplicateSafeName>Redfish Create and Verify Users</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t3</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Redfish Create and Verify Users</name>
+                          <description>Create Redfish users with various roles.</description>
+                          <starttime>20200605 09:51:20.763</starttime>
+                          <endtime>20200605 09:51:21.384</endtime>
+                          <tags>
+                            <string>Redfish_Create_and_Verify_Users</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify User Creation Without Enabling it</string>
+                        <case>
+                          <duplicateSafeName>Verify User Creation Without Enabling it</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t6</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify User Creation Without Enabling it</name>
+                          <description>Verify User Creation Without Enabling it.</description>
+                          <starttime>20200605 09:51:22.264</starttime>
+                          <endtime>20200605 09:51:22.860</endtime>
+                          <tags>
+                            <string>Verify_User_Creation_Without_Enabling_it</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Create and Patch parameters</string>
+                        <case>
+                          <duplicateSafeName>Verify Create and Patch parameters</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t8</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Create and Patch parameters</name>
+                          <description>Create Redfish users with various roles.</description>
+                          <starttime>20200605 09:51:23.228</starttime>
+                          <endtime>20200605 09:51:23.675</endtime>
+                          <tags>
+                            <string>Redfish_Create_and_Verify_Users</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish User Persistence After Reboot</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish User Persistence After Reboot</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t9</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish User Persistence After Reboot</name>
+                          <description>Verify Redfish user persistence after reboot.</description>
+                          <starttime>20200605 09:51:23.675</starttime>
+                          <endtime>20200605 09:54:25.428</endtime>
+                          <tags>
+                            <string>Verify_Redfish_User_Persistence_After_Reboot</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify AccountService_OPUser_Cannot_POST_PATCH</string>
+                        <case>
+                          <duplicateSafeName>Verify AccountService_OPUser_Cannot_POST_PATCH</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t12</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify AccountService_OPUser_Cannot_POST_PATCH</name>
+                          <description>Verify Redfish OPUser account cannot use patch post action</description>
+                          <starttime>20200605 09:54:30.717</starttime>
+                          <endtime>20200605 09:57:31.521</endtime>
+                          <tags>
+                            <string>Verify_AccountService_OPUser_CANNOT_PATCH_POST</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Login with Deleted Redfish Users</string>
+                        <case>
+                          <duplicateSafeName>Verify Login with Deleted Redfish Users</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t5</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Login with Deleted Redfish Users</name>
+                          <description>Verify login with deleted Redfish Users.</description>
+                          <starttime>20200605 09:51:21.801</starttime>
+                          <endtime>20200605 09:51:22.263</endtime>
+                          <tags>
+                            <string>Verify_Login_with_Deleted_Redfish_Users</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish User with Wrong Password</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish User with Wrong Password</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t4</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish User with Wrong Password</name>
+                          <description>Verify Redfish User with Wrong Password.</description>
+                          <starttime>20200605 09:51:21.385</starttime>
+                          <endtime>20200605 09:51:21.800</endtime>
+                          <tags>
+                            <string>Verify_Redfish_User_with_Wrong_Password</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify AccountService_ReadOnlyUser</string>
+                        <case>
+                          <duplicateSafeName>Verify AccountService_ReadOnlyUser</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t10</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify AccountService_ReadOnlyUser</name>
+                          <description>Verify Redfish ReadOnlyUser account can get major service</description>
+                          <starttime>20200605 09:54:25.429</starttime>
+                          <endtime>20200605 09:54:29.795</endtime>
+                          <tags>
+                            <string>Verify_AccountService_UserOnlyUser_Enable</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify User Creation With locking it</string>
+                        <case>
+                          <duplicateSafeName>Verify User Creation With locking it</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t7</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify User Creation With locking it</name>
+                          <description>Verify User Creation With locking it.</description>
+                          <starttime>20200605 09:51:22.861</starttime>
+                          <endtime>20200605 09:51:23.228</endtime>
+                          <tags>
+                            <string>Verify_User_Creation_With_locking_it</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify AccountService Available</string>
+                        <case>
+                          <duplicateSafeName>Verify AccountService Available</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify AccountService Available</name>
+                          <description>Verify Redfish account service is available.</description>
+                          <starttime>20200605 09:51:10.434</starttime>
+                          <endtime>20200605 09:51:10.568</endtime>
+                          <tags>
+                            <string>Verify_AccountService_Available</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify AccountService_session_timeout</string>
+                        <case>
+                          <duplicateSafeName>Verify AccountService_session_timeout</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t2</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify AccountService_session_timeout</name>
+                          <description>Verify Redfish session timeout</description>
+                          <starttime>20200605 09:51:10.568</starttime>
+                          <endtime>20200605 09:51:20.762</endtime>
+                          <tags>
+                            <string>Verify_AccountService_session_timeout</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify AccountService_ReadOnlyUser_Cannot_POST_PATCH</string>
+                        <case>
+                          <duplicateSafeName>Verify AccountService_ReadOnlyUser_Cannot_POST_PATCH</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s2-s1-t11</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify AccountService_ReadOnlyUser_Cannot_POST_PATCH</name>
+                          <description>Verify Redfish ReadOnlyUser account cannot use patch post action</description>
+                          <starttime>20200605 09:54:29.795</starttime>
+                          <endtime>20200605 09:54:30.716</endtime>
+                          <tags>
+                            <string>Verify_AccountService_ReadOnlyUser_CANNOT_PATCH_POST</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:51:10.420</startTime>
+                    <endTime>20200605 09:57:31.522</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>1 Account Service</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:51:10.418</startTime>
+              <endTime>20200605 09:57:31.528</endTime>
+            </suite>
+          </entry>
+          <entry>
+            <string>2 Service Root</string>
+            <suite>
+              <duplicateSafeName>2 Service Root</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s3</id>
+              <children>
+                <entry>
+                  <string>Test Service Root Security</string>
+                  <suite>
+                    <duplicateSafeName>Test Service Root Security</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s3-s2</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test Service Root Security</name>
+                    <description>Test Redfish service root login security.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Attempt Login With Expired Session</string>
+                        <case>
+                          <duplicateSafeName>Attempt Login With Expired Session</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s2-t2</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Attempt Login With Expired Session</name>
+                          <description>Authenticate to redfish, then log out and attempt to
+use the session.</description>
+                          <starttime>20200605 09:57:32.597</starttime>
+                          <endtime>20200605 09:58:07.776</endtime>
+                          <tags>
+                            <string>Attempt_Login_With_Expired_Session</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Redfish Login With Invalid Credentials</string>
+                        <case>
+                          <duplicateSafeName>Redfish Login With Invalid Credentials</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s2-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Redfish Login With Invalid Credentials</name>
+                          <description>Login to BMC web using invalid credential.</description>
+                          <starttime>20200605 09:57:32.374</starttime>
+                          <endtime>20200605 09:57:32.597</endtime>
+                          <tags>
+                            <string>Redfish_Login_With_Invalid_Credentials</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:57:32.284</startTime>
+                    <endTime>20200605 09:58:07.777</endTime>
+                  </suite>
+                </entry>
+                <entry>
+                  <string>Test Service Root</string>
+                  <suite>
+                    <duplicateSafeName>Test Service Root</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s3-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test Service Root</name>
+                    <description>Test Redfish to verify responses for SessionService and Hypermedia.</description>
+                    <caseResults>
+                      <entry>
+                        <string>GET Redfish Hypermedia Without Login</string>
+                        <case>
+                          <duplicateSafeName>GET Redfish Hypermedia Without Login</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s1-t2</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>GET Redfish Hypermedia Without Login</name>
+                          <description>GET hypermedia URL without login.</description>
+                          <starttime>20200605 09:57:31.700</starttime>
+                          <endtime>20200605 09:57:31.824</endtime>
+                          <tags>
+                            <string>GET_Redfish_Hypermedia_Without_Login</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>GET Redfish SessionService Without Login</string>
+                        <case>
+                          <duplicateSafeName>GET Redfish SessionService Without Login</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s1-t4</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>GET Redfish SessionService Without Login</name>
+                          <description>Get /redfish/v1/SessionService without login</description>
+                          <starttime>20200605 09:57:31.942</starttime>
+                          <endtime>20200605 09:57:31.979</endtime>
+                          <tags>
+                            <string>GET_Redfish_SessionService_Without_Login</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Redfish Login And Logout</string>
+                        <case>
+                          <duplicateSafeName>Redfish Login And Logout</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s1-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Redfish Login And Logout</name>
+                          <description>Login to BMCweb and then logout.</description>
+                          <starttime>20200605 09:57:31.553</starttime>
+                          <endtime>20200605 09:57:31.699</endtime>
+                          <tags>
+                            <string>Redfish_Login_And_Logout</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>GET Redfish SessionService Resource With Login</string>
+                        <case>
+                          <duplicateSafeName>GET Redfish SessionService Resource With Login</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s1-t3</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>GET Redfish SessionService Resource With Login</name>
+                          <description>Login to BMCweb and get /redfish/v1/SessionService.</description>
+                          <starttime>20200605 09:57:31.825</starttime>
+                          <endtime>20200605 09:57:31.941</endtime>
+                          <tags>
+                            <string>GET_Redfish_SessionService_Resource_With_Login</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Delete Redfish Session Using Valid login</string>
+                        <case>
+                          <duplicateSafeName>Delete Redfish Session Using Valid login</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s3-s1-t5</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Delete Redfish Session Using Valid login</name>
+                          <description>Delete a session using valid login.</description>
+                          <starttime>20200605 09:57:31.980</starttime>
+                          <endtime>20200605 09:57:32.280</endtime>
+                          <tags>
+                            <string>Delete_Redfish_Session_Using_Valid_Login</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:57:31.534</startTime>
+                    <endTime>20200605 09:57:32.282</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>2 Service Root</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:57:31.532</startTime>
+              <endTime>20200605 09:58:07.779</endTime>
+            </suite>
+          </entry>
+          <entry>
+            <string>6 Dmtf Tools</string>
+            <suite>
+              <duplicateSafeName>6 Dmtf Tools</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s7</id>
+              <children>
+                <entry>
+                  <string>Redfish Service Validator</string>
+                  <suite>
+                    <duplicateSafeName>Redfish Service Validator</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s7-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Redfish Service Validator</name>
+                    <description>Test PSME using https://github.com/DMTF/Redfish-Service-Validator.
+DMTF tool.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Test Redfish Using Redfish Service Validator</string>
+                        <case>
+                          <duplicateSafeName>Test Redfish Using Redfish Service Validator</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s7-s1-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Test Redfish Using Redfish Service Validator</name>
+                          <description>Check conformance with a Redfish service interface.</description>
+                          <starttime>20200605 09:58:40.059</starttime>
+                          <endtime>20200605 09:59:22.868</endtime>
+                          <tags>
+                            <string>Test_Redfish_Using_Redfish_Service_Validator</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:58:40.040</startTime>
+                    <endTime>20200605 09:59:22.868</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>6 Dmtf Tools</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:58:40.037</startTime>
+              <endTime>20200605 09:59:22.869</endTime>
+            </suite>
+          </entry>
+          <entry>
+            <string>0 Switches</string>
+            <suite>
+              <duplicateSafeName>0 Switches</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s1</id>
+              <children>
+                <entry>
+                  <string>Test Switches</string>
+                  <suite>
+                    <duplicateSafeName>Test Switches</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s1-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test Switches</name>
+                    <description>Test PSME switches port functionality.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Verify Stress loop test</string>
+                        <case>
+                          <duplicateSafeName>Verify Stress loop test</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s1-s1-t1</id>
+                          <passed>false</passed>
+                          <critical>true</critical>
+                          <errorMsg>Up != Down</errorMsg>
+                          <name>Verify Stress loop test</name>
+                          <description>Test SFP port tx disable stress test</description>
+                          <starttime>20200605 09:51:06.509</starttime>
+                          <endtime>20200605 09:51:10.414</endtime>
+                          <tags>
+                            <string>Test Stress loop test</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:51:04.178</startTime>
+                    <endTime>20200605 09:51:10.415</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>0 Switches</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:51:04.177</startTime>
+              <endTime>20200605 09:51:10.417</endTime>
+            </suite>
+          </entry>
+          <entry>
+            <string>5 Chassis</string>
+            <suite>
+              <duplicateSafeName>5 Chassis</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s6</id>
+              <children>
+                <entry>
+                  <string>Test Chassis Psme</string>
+                  <suite>
+                    <duplicateSafeName>Test Chassis Psme</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s6-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test Chassis Psme</name>
+                    <description>Test PSME Manager functionality.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Check Fan</string>
+                        <case>
+                          <duplicateSafeName>Check Fan</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s6-s1-t3</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Check Fan</name>
+                          <description>Verify Fan and verify status</description>
+                          <starttime>20200605 09:58:39.536</starttime>
+                          <endtime>20200605 09:58:39.855</endtime>
+                          <tags>
+                            <string>Verify_FAN_and_verify_status</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Check PSU</string>
+                        <case>
+                          <duplicateSafeName>Check PSU</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s6-s1-t4</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Check PSU</name>
+                          <description>Verify PSU and verify status</description>
+                          <starttime>20200605 09:58:39.856</starttime>
+                          <endtime>20200605 09:58:40.030</endtime>
+                          <tags>
+                            <string>Verify_PSU_and_verify_status</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish PSME Chassis Properties</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish PSME Chassis Properties</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s6-s1-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish PSME Chassis Properties</name>
+                          <description>Verify PSME chassis resource properties.</description>
+                          <starttime>20200605 09:58:38.630</starttime>
+                          <endtime>20200605 09:58:39.084</endtime>
+                          <tags>
+                            <string>Verify_Redfish_PSME_Chsssis_Properties</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Check Thermal Sensor</string>
+                        <case>
+                          <duplicateSafeName>Check Thermal Sensor</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s6-s1-t2</id>
+                          <passed>false</passed>
+                          <critical>true</critical>
+                          <errorMsg>0 == 0</errorMsg>
+                          <name>Check Thermal Sensor</name>
+                          <description>Verify Thermal sensor</description>
+                          <starttime>20200605 09:58:39.085</starttime>
+                          <endtime>20200605 09:58:39.535</endtime>
+                          <tags>
+                            <string>Verify_Thermal_sensor</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:58:38.562</startTime>
+                    <endTime>20200605 09:58:40.031</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>5 Chassis</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:58:38.561</startTime>
+              <endTime>20200605 09:58:40.035</endTime>
+            </suite>
+          </entry>
+          <entry>
+            <string>3 Event Service</string>
+            <suite>
+              <duplicateSafeName>3 Event Service</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s4</id>
+              <children>
+                <entry>
+                  <string>Test Event Service</string>
+                  <suite>
+                    <duplicateSafeName>Test Event Service</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s4-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test Event Service</name>
+                    <description>Test Redfish user account.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Verify Redfish Op Add Event_1</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Op Add Event_1</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t7</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Op Add Event</name>
+                          <description>Subscribe Event</description>
+                          <starttime>20200605 09:58:10.184</starttime>
+                          <endtime>20200605 09:58:10.584</endtime>
+                          <tags>
+                            <string>Op Redfish_Add_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish Admin Add Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Admin Add Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Admin Add Event</name>
+                          <description>Subscribe Event</description>
+                          <starttime>20200605 09:58:07.794</starttime>
+                          <endtime>20200605 09:58:08.021</endtime>
+                          <tags>
+                            <string>Admin Redfish_Add_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish Admin Patch Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Admin Patch Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t2</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Admin Patch Event</name>
+                          <description>Subscribe Event</description>
+                          <starttime>20200605 09:58:08.022</starttime>
+                          <endtime>20200605 09:58:08.349</endtime>
+                          <tags>
+                            <string>Admin Redfish_Patch_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish Op Del Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Op Del Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t5</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Op Del Event</name>
+                          <description>Del Subscribed Event</description>
+                          <starttime>20200605 09:58:09.166</starttime>
+                          <endtime>20200605 09:58:09.764</endtime>
+                          <tags>
+                            <string>Op Redfish_Del_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish Op Add Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Op Add Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t4</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Op Add Event</name>
+                          <description>Subscribe Event</description>
+                          <starttime>20200605 09:58:08.774</starttime>
+                          <endtime>20200605 09:58:09.165</endtime>
+                          <tags>
+                            <string>Op Redfish_Add_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish ReadOnlyUser Add Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish ReadOnlyUser Add Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t6</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish ReadOnlyUser Add Event</name>
+                          <description>Subscribe Event</description>
+                          <starttime>20200605 09:58:09.764</starttime>
+                          <endtime>20200605 09:58:10.183</endtime>
+                          <tags>
+                            <string>ReadOnlyUser Redfish_Add_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish ReadOnlyUser Del Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish ReadOnlyUser Del Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t8</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish ReadOnlyUser Del Event</name>
+                          <description>Del Subscribed Event</description>
+                          <starttime>20200605 09:58:10.585</starttime>
+                          <endtime>20200605 09:58:11.174</endtime>
+                          <tags>
+                            <string>ReadOnlyUser Redfish_Del_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish Admin Del Event</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Admin Del Event</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t3</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Admin Del Event</name>
+                          <description>Del Subscribed Event</description>
+                          <starttime>20200605 09:58:08.350</starttime>
+                          <endtime>20200605 09:58:08.773</endtime>
+                          <tags>
+                            <string>Admin Redfish_Del_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish Op Del Event_1</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish Op Del Event_1</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s4-s1-t9</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish Op Del Event</name>
+                          <description>Del Subscribed Event</description>
+                          <starttime>20200605 09:58:11.175</starttime>
+                          <endtime>20200605 09:58:11.789</endtime>
+                          <tags>
+                            <string>Op Redfish_Del_Event</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:58:07.782</startTime>
+                    <endTime>20200605 09:58:11.790</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>3 Event Service</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:58:07.780</startTime>
+              <endTime>20200605 09:58:11.793</endTime>
+            </suite>
+          </entry>
+          <entry>
+            <string>4 Managers</string>
+            <suite>
+              <duplicateSafeName>4 Managers</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <reportFile>report.html</reportFile>
+              <id>s1-s5</id>
+              <children>
+                <entry>
+                  <string>Test Managers Psme</string>
+                  <suite>
+                    <duplicateSafeName>Test Managers Psme</duplicateSafeName>
+                    <logFile>log.html</logFile>
+                    <reportFile>report.html</reportFile>
+                    <id>s1-s5-s1</id>
+                    <children/>
+                    <parent class="suite" reference="../../../.."/>
+                    <name>Test Managers Psme</name>
+                    <description>Test PSME Manager functionality.</description>
+                    <caseResults>
+                      <entry>
+                        <string>Verify PSME Redfish Version</string>
+                        <case>
+                          <duplicateSafeName>Verify PSME Redfish Version</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s5-s1-t1</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify PSME Redfish Version</name>
+                          <description>Get PSME version from manager board.</description>
+                          <starttime>20200605 09:58:11.879</starttime>
+                          <endtime>20200605 09:58:12.012</endtime>
+                          <tags>
+                            <string>Verify_PSME_Redfish_Version</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Set Static IPv4 IP address</string>
+                        <case>
+                          <duplicateSafeName>Verify Set Static IPv4 IP address</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s5-s1-t3</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Set Static IPv4 IP address</name>
+                          <description>Verify PSME managers to set IPv4 IP address</description>
+                          <starttime>20200605 09:58:12.115</starttime>
+                          <endtime>20200605 09:58:38.555</endtime>
+                          <tags>
+                            <string>Verify_PSME_managers_to_set_IPv4_IP</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                      <entry>
+                        <string>Verify Redfish PSME Manager Properties</string>
+                        <case>
+                          <duplicateSafeName>Verify Redfish PSME Manager Properties</duplicateSafeName>
+                          <logFile>log.html</logFile>
+                          <id>s1-s5-s1-t2</id>
+                          <passed>true</passed>
+                          <critical>true</critical>
+                          <name>Verify Redfish PSME Manager Properties</name>
+                          <description>Verify PSME managers resource properties.</description>
+                          <starttime>20200605 09:58:12.013</starttime>
+                          <endtime>20200605 09:58:12.115</endtime>
+                          <tags>
+                            <string>Verify_Redfish_PSME_Manager_Properties</string>
+                          </tags>
+                          <parent reference="../../../.."/>
+                          <failedSince>0</failedSince>
+                        </case>
+                      </entry>
+                    </caseResults>
+                    <startTime>20200605 09:58:11.798</startTime>
+                    <endTime>20200605 09:58:38.557</endTime>
+                  </suite>
+                </entry>
+              </children>
+              <parent class="suite" reference="../../../.."/>
+              <name>4 Managers</name>
+              <description></description>
+              <caseResults/>
+              <startTime>20200605 09:58:11.796</startTime>
+              <endTime>20200605 09:58:38.559</endTime>
+            </suite>
+          </entry>
+        </children>
+        <parent class="result" reference="../../../.."/>
+        <name>Redfish</name>
+        <description></description>
+        <caseResults/>
+        <startTime>20200605 09:51:04.055</startTime>
+        <endTime>20200605 09:59:22.872</endTime>
+      </suite>
+    </entry>
+  </suites>
+</result>

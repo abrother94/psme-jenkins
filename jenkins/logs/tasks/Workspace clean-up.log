@@ -1,0 +1,16 @@
+Started at Thu Jun 04 14:27:54 UTC 2020
+Checking XGSPON » 0_Check_Test_Environment
+Checking XGSPON » 1_Build_BAL_SDK_ALLIN_ONE
+Checking XGSPON » 2_Install_Onl_Allinone_Package
+Checking XGSPON » 3_Install_Bal_Psme
+Checking XGSPON » 4_Traffic_Test
+Checking XGSPON » 5_RF_Auto_Test
+Checking XGSPON » 6_Bal_Resf_API_Test
+Checking GPON » 0_Check_Test_Environment
+Checking GPON » 1_Build_BAL_SDK_ALLIN_ONE
+Checking GPON » 2_Install_Onl_Allinone_Package
+Checking GPON » 3_Install_Bal_Psme
+Checking GPON » 4_Traffic_Test
+Checking GPON » 5_RF_Auto_Test
+Checking GPON » 6_Bal_Resf_API_Test
+Finished at Thu Jun 04 14:27:55 UTC 2020. 1522ms

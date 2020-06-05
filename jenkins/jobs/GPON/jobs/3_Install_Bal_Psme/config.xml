@@ -94,9 +94,8 @@ sed -i &apos;/^exit 0/i \/opt\/bcm68620\/svk_init.sh&apos; /etc/rc.local
 sed -i &apos;/^exit 0/i dhclient ma1&apos; /etc/rc.local 
 
 # GPON NNI PORTs set to 40G
-sed -i &apos;s/port ce128 speed=100000/port ce128 speed=40000/g&apos; /broadcom/qax.soc 
-
-sed -i &apos;s/port ce129 speed=100000/port ce129 speed=40000/g&apos; /broadcom/qax.soc
+cd /broadcom/
+sed -i &apos;s/setenv port_speed_for_100 100000/setenv port_speed_for_100 40000/g&apos; port_speed.soc
 
 #ONU ID
 #sed -i &apos;s/71E80110/428DA323/g&apos; /broadcom/onu_cfg

@@ -1,0 +1,56 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4L6V7XeU4+9YwROGfPXRu+CYeBQWZtYJ4FQli4hUl+igAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MxMATptZW9gAAAA=[0mBuild_Server_172.17.10.64 in workspace /home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE
+[1_Build_BAL_SDK_ALLIN_ONE] $ /bin/bash /tmp/jenkins8180586430936412831.sh
+ONL_COMMIT_ID[72b95a7]
+PLTFORM[asgvolt64]
+PSME_VER[2.1.3.59.25]
+BAL_SDK_VER[3.4.5.5]
+MDATE[2020-06-01-PM-03-04-asgvolt64-3.4.5.5-2.1.3.59.25-72b95a7]
+COMMIT_ID[72b95a7]
+PLT[asgvolt64]
+BAL_PLT_NAME[asgvolt64-bal]
+BAL_VER[3.4.5.5]
+FIT[False]
+BuildPSMEOnly[False]
+1[72b95a7]
+2[asgvolt64]
+3[3.4.5.5]
+4[False]
+5[False]
+Kernel Version
+USERNAME[voltha]
+BAL3_RSD_213_CONTAINER_ID[9fe6418e3f6c]
+BAL3_RSD_213
+BAL3_RSD_213
+TOP_DIR[/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE]
+Cloning into 'BAL'...
+fatal: unable to access 'https://nick_huang:password@git88.accton.com.tw/cicada/vOLT/BAL.git/': Failed to connect to git88.accton.com.tw port 443: Connection timed out
+Cloning into 'bal-api-3.4.3.3'...
+mv: cannot stat 'BAL': No such file or directory
+./Build_BAL_SDK_ALL.sh: line 135: cd: asgvolt64-bal: No such file or directory
+SDK_DIR[/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build]
+fatal: Not a git repository (or any of the parent directories): .git
+BAL_VER[bal]
+Cloning into 'OpenNetworkLinux'...
+HEAD is now at 72b95a7 Merge branch 'master' of github.com:opencomputeproject/OpenNetworkLinux
+OLN_DIR[/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asvolt-onl/OpenNetworkLinux]
+ONL_KERNEL_VERSION_FILE[/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asvolt-onl/OpenNetworkLinux/packages/base/any/kernels/4.14-lts/kconfig.mk]
+Kernel ver[4-14-151]
+Cloning into 'RSD-Redfish'...
+PSME_BUILD_DIR[/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/asvolt-onl/OpenNetworkLinux/RSD-Redfish/PSME/build]
+f1ca70e37f51115d9fe515416037c160a6b1fb3e26f2e35ea719e43bf91f0862
+BAL_ONL_KERNEL_FILE[/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/host_customized/cmake/modules/asgvolt64.cmake]
+sed: can't read /home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/host_customized/cmake/modules/asgvolt64.cmake: No such file or directory
+sed: can't read /home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE/bal_sdk_allinone/build/host_customized/cmake/modules/asgvolt64.cmake: No such file or directory
+Submodule 'sm/infra' (http://github.com/floodlight/infra) registered for path 'sm/infra'
+Cloning into 'sm/infra'...
+Submodule path 'sm/infra': checked out 'd323f34967127c82bfd6c7ee28fef1e21c544d98'
+Submodule 'sm/bigcode' (http://github.com/floodlight/bigcode) registered for path 'sm/bigcode'
+Cloning into 'sm/bigcode'...
+Submodule path 'sm/bigcode': checked out '2df6c06594b12de559ad3189c13d70adda68ee8e'
+Submodule 'sm/build-artifacts' (http://github.com/opennetworklinux/build-artifacts) registered for path 'sm/build-artifacts'
+Cloning into 'sm/build-artifacts'...
+Build was aborted
+Aborted by [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Finished: ABORTED

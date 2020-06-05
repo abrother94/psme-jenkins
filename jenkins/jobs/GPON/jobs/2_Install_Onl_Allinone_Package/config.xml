@@ -29,20 +29,20 @@
         <hudson.model.StringParameterDefinition>
           <name>BAL_SDK_VER</name>
           <description></description>
-          <defaultValue>3.5.1.1</defaultValue>
+          <defaultValue>3.4.5.5</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MDATE</name>
           <description></description>
-          <defaultValue>2020-04-27-PM-4-56-$PLTFORM-$BAL_SDK_VER-$PSME_VER-$ONL_ID</defaultValue>
+          <defaultValue>2020-06-04-PM-01-04-$PLTFORM-$BAL_SDK_VER-$PSME_VER-$ONL_ID</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>Build_PSME_ONLY</name>
           <description>Only build PSEM only, set it to &quot;True&quot;
 This needs a well build ONL and BAL docker in env.</description>
-          <defaultValue>True</defaultValue>
+          <defaultValue>False</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>

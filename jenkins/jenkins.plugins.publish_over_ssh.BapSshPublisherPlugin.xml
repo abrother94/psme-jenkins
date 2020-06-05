@@ -5,7 +5,7 @@
       <name>5916-54XM</name>
       <hostname>172.17.8.122</hostname>
       <username>root</username>
-      <secretPassword>{AQAAABAAAAAQJc8QKzOj9hafdI6A3feKK8hZaNcKhsBn4sogrTsd/a8=}</secretPassword>
+      <secretPassword>{AQAAABAAAAAQS5b5TvsBySHhXSc8quXAXx7F7ZyeLMI/84KDLw/YQ8A=}</secretPassword>
       <remoteRootDir>/tmp</remoteRootDir>
       <port>22</port>
       <commonConfig class="jenkins.plugins.publish_over_ssh.BapSshCommonConfiguration">
@@ -33,7 +33,7 @@
       <name>XGSPON-OLT</name>
       <hostname>172.17.10.7</hostname>
       <username>root</username>
-      <secretPassword>{AQAAABAAAAAQJozL+zw1js2bK3fkjHRezmnXaEtFZi8ixd8UE/IhA2Y=}</secretPassword>
+      <secretPassword>{AQAAABAAAAAQU/zgwj2W/Gaht5wCVTUAMMHzX6NAqkMDWcTXDk2mQX0=}</secretPassword>
       <remoteRootDir>/tmp</remoteRootDir>
       <port>22</port>
       <commonConfig class="jenkins.plugins.publish_over_ssh.BapSshCommonConfiguration" reference="../../jenkins.plugins.publish__over__ssh.BapSshHostConfiguration/commonConfig"/>
@@ -56,7 +56,7 @@
       <name>TFTP-SERVER</name>
       <hostname>172.17.9.146</hostname>
       <username>kai</username>
-      <secretPassword>{AQAAABAAAAAQEPPOM5qLEb9HXZh4Dqacu8pI44XQ8eKPIKCUwtlYF9w=}</secretPassword>
+      <secretPassword>{AQAAABAAAAAQzhNZ+7YifuNgl4p2oorIflUPwvlNGexJFGvI3+EjTyQ=}</secretPassword>
       <remoteRootDir>tftp</remoteRootDir>
       <port>22</port>
       <commonConfig class="jenkins.plugins.publish_over_ssh.BapSshCommonConfiguration" reference="../../jenkins.plugins.publish__over__ssh.BapSshHostConfiguration/commonConfig"/>
@@ -79,7 +79,7 @@
       <name>XGSPON-OLT-DHCP</name>
       <hostname>172.17.8.179</hostname>
       <username>root</username>
-      <secretPassword>{AQAAABAAAAAQwibBmoWJUR54kUrZQIL5A0KdEpZlCcWBg25UgPDbvfQ=}</secretPassword>
+      <secretPassword>{AQAAABAAAAAQa1S43JSyyT/kO1xEALrHglF25MztgzrRi2mIOYjzqL8=}</secretPassword>
       <remoteRootDir></remoteRootDir>
       <port>22</port>
       <commonConfig class="jenkins.plugins.publish_over_ssh.BapSshCommonConfiguration" reference="../../jenkins.plugins.publish__over__ssh.BapSshHostConfiguration/commonConfig"/>
@@ -102,7 +102,7 @@
       <name>GPON-OLT-172.17.10.6</name>
       <hostname>172.17.10.6</hostname>
       <username>root</username>
-      <secretPassword>{AQAAABAAAAAQXaD6fjWlWzwzAFMXD/rNRFaU5x2f7PrGKKCqzypuGQw=}</secretPassword>
+      <secretPassword>{AQAAABAAAAAQOhUJWvkQxYOk56lexejtX2wIApSmzvkZua9rXVrTosA=}</secretPassword>
       <remoteRootDir></remoteRootDir>
       <port>22</port>
       <commonConfig class="jenkins.plugins.publish_over_ssh.BapSshCommonConfiguration" reference="../../jenkins.plugins.publish__over__ssh.BapSshHostConfiguration/commonConfig"/>

@@ -1,0 +1,178 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/XGSPON/2_Install_Onl_Allinone_Package
+[SSH] script:
+
+#!/bin/bash
+#Above IP address need depend on your working OLT real IP address
+#onl-onie-boot-mode uninstall
+#reboot
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[2_Install_Onl_Allinone_Package] $ /bin/bash /tmp/jenkins2696649383906791948.sh
+ONL_COMMIT_ID[72b95a7]
+PLTFORM[asfvolt16]
+PSME_VER[2.1.3.59.25]
+BAL_SDK_VER[3.4.5.5]
+MDATE=[2020-05-30-AM-00-39-asfvolt16-3.4.5.5-2.1.3.59.25-72b95a7]
+## Wait 20 minutes for XGSPON (R01) uninstall ONL ##
+0
+[SSH] script:
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+MDATE="2020-05-30-AM-00-39-asfvolt16-3.4.5.5-2.1.3.59.25-72b95a7"
+ONL_ID="72b95a7"
+BAL_SDK_VER="3.4.5.5"
+PSME_VER="2.1.3.59.25"
+PLTFORM="asfvolt16"
+
+#!/bin/bash
+#Above IP address need depend on your working OLT real IP address
+echo "ONL_COMMIT_ID[$ONL_ID]"
+echo "PLTFORM[$PLTFORM]"
+echo "PSME_VER[$PSME_VER]"
+echo "BAL_SDK_VER[$BAL_SDK_VER]"
+echo "MDATE[$MDATE]"
+pwd
+DATE=$MDATE
+export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin';onie-nos-install tftp://172.17.9.146/Daily_Build/$PLTFORM/$DATE/ONL_INSTALLER
+
+
+[SSH] executing...
+ONL_COMMIT_ID[72b95a7]
+PLTFORM[asfvolt16]
+PSME_VER[2.1.3.59.25]
+BAL_SDK_VER[3.4.5.5]
+MDATE[2020-05-30-AM-00-39-asfvolt16-3.4.5.5-2.1.3.59.25-72b95a7]
+/root
+Info: Attempting tftp://172.17.9.146/Daily_Build/asfvolt16/2020-05-30-AM-00-39-asfvolt16-3.4.5.5-2.1.3.59.25-72b95a7/ONL_INSTALLER ...
+Daily_Build/asfvolt1   0% |                               |  1061k  0:04:28 ETA
+Daily_Build/asfvolt1   1% |                               |  3430k  0:02:44 ETA
+Daily_Build/asfvolt1   2% |                               |  6117k  0:02:17 ETA
+Daily_Build/asfvolt1   3% |                               |  8856k  0:02:05 ETA
+Daily_Build/asfvolt1   3% |*                              | 11341k  0:02:01 ETA
+Daily_Build/asfvolt1   4% |*                              | 13983k  0:01:56 ETA
+Daily_Build/asfvolt1   5% |*                              | 16497k  0:01:54 ETA
+Daily_Build/asfvolt1   6% |**                             | 18859k  0:01:53 ETA
+Daily_Build/asfvolt1   7% |**                             | 21510k  0:01:50 ETA
+Daily_Build/asfvolt1   8% |**                             | 24096k  0:01:48 ETA
+Daily_Build/asfvolt1   9% |**                             | 26668k  0:01:46 ETA
+Daily_Build/asfvolt1  10% |***                            | 29151k  0:01:45 ETA
+Daily_Build/asfvolt1  11% |***                            | 31800k  0:01:43 ETA
+Daily_Build/asfvolt1  11% |***                            | 34217k  0:01:43 ETA
+Daily_Build/asfvolt1  12% |***                            | 36467k  0:01:42 ETA
+Daily_Build/asfvolt1  13% |****                           | 38939k  0:01:41 ETA
+Daily_Build/asfvolt1  14% |****                           | 41437k  0:01:40 ETA
+Daily_Build/asfvolt1  15% |****                           | 44146k  0:01:38 ETA
+Daily_Build/asfvolt1  16% |*****                          | 46649k  0:01:37 ETA
+Daily_Build/asfvolt1  17% |*****                          | 48981k  0:01:36 ETA
+Daily_Build/asfvolt1  17% |*****                          | 51418k  0:01:35 ETA
+Daily_Build/asfvolt1  18% |*****                          | 53819k  0:01:34 ETA
+Daily_Build/asfvolt1  19% |******                         | 56365k  0:01:33 ETA
+Daily_Build/asfvolt1  20% |******                         | 58909k  0:01:32 ETA
+Daily_Build/asfvolt1  21% |******                         | 61346k  0:01:31 ETA
+Daily_Build/asfvolt1  22% |******                         | 63944k  0:01:30 ETA
+Daily_Build/asfvolt1  23% |*******                        | 66540k  0:01:29 ETA
+Daily_Build/asfvolt1  24% |*******                        | 68960k  0:01:28 ETA
+Daily_Build/asfvolt1  24% |*******                        | 71247k  0:01:27 ETA
+Daily_Build/asfvolt1  25% |********                       | 73944k  0:01:26 ETA
+Daily_Build/asfvolt1  26% |********                       | 76403k  0:01:25 ETA
+Daily_Build/asfvolt1  27% |********                       | 78968k  0:01:23 ETA
+Daily_Build/asfvolt1  28% |********                       | 81492k  0:01:22 ETA
+Daily_Build/asfvolt1  29% |*********                      | 83846k  0:01:21 ETA
+Daily_Build/asfvolt1  30% |*********                      | 86617k  0:01:20 ETA
+Daily_Build/asfvolt1  31% |*********                      | 89347k  0:01:19 ETA
+Daily_Build/asfvolt1  32% |*********                      | 92095k  0:01:17 ETA
+Daily_Build/asfvolt1  33% |**********                     | 94662k  0:01:16 ETA
+Daily_Build/asfvolt1  33% |**********                     | 97153k  0:01:15 ETA
+Daily_Build/asfvolt1  34% |**********                     | 99754k  0:01:14 ETA
+Daily_Build/asfvolt1  35% |***********                    |    99M  0:01:13 ETA
+Daily_Build/asfvolt1  36% |***********                    |   102M  0:01:12 ETA
+Daily_Build/asfvolt1  37% |***********                    |   104M  0:01:11 ETA
+Daily_Build/asfvolt1  38% |***********                    |   106M  0:01:10 ETA
+Daily_Build/asfvolt1  39% |************                   |   109M  0:01:09 ETA
+Daily_Build/asfvolt1  40% |************                   |   112M  0:01:08 ETA
+Daily_Build/asfvolt1  40% |************                   |   114M  0:01:07 ETA
+Daily_Build/asfvolt1  41% |************                   |   116M  0:01:06 ETA
+Daily_Build/asfvolt1  42% |*************                  |   119M  0:01:05 ETA
+Daily_Build/asfvolt1  43% |*************                  |   121M  0:01:04 ETA
+Daily_Build/asfvolt1  44% |*************                  |   124M  0:01:03 ETA
+Daily_Build/asfvolt1  45% |**************                 |   126M  0:01:02 ETA
+Daily_Build/asfvolt1  46% |**************                 |   129M  0:01:01 ETA
+Daily_Build/asfvolt1  47% |**************                 |   131M  0:01:00 ETA
+Daily_Build/asfvolt1  48% |**************                 |   134M  0:00:59 ETA
+Daily_Build/asfvolt1  48% |***************                |   136M  0:00:58 ETA
+Daily_Build/asfvolt1  49% |***************                |   138M  0:00:57 ETA
+Daily_Build/asfvolt1  50% |***************                |   141M  0:00:56 ETA
+Daily_Build/asfvolt1  51% |***************                |   143M  0:00:55 ETA
+Daily_Build/asfvolt1  52% |****************               |   146M  0:00:54 ETA
+Daily_Build/asfvolt1  53% |****************               |   148M  0:00:53 ETA
+Daily_Build/asfvolt1  54% |****************               |   151M  0:00:52 ETA
+Daily_Build/asfvolt1  54% |*****************              |   153M  0:00:51 ETA
+Daily_Build/asfvolt1  55% |*****************              |   155M  0:00:50 ETA
+Daily_Build/asfvolt1  56% |*****************              |   158M  0:00:49 ETA
+Daily_Build/asfvolt1  57% |*****************              |   160M  0:00:48 ETA
+Daily_Build/asfvolt1  58% |******************             |   163M  0:00:47 ETA
+Daily_Build/asfvolt1  59% |******************             |   165M  0:00:46 ETA
+Daily_Build/asfvolt1  60% |******************             |   168M  0:00:45 ETA
+Daily_Build/asfvolt1  61% |******************             |   170M  0:00:44 ETA
+Daily_Build/asfvolt1  61% |*******************            |   172M  0:00:43 ETA
+Daily_Build/asfvolt1  62% |*******************            |   175M  0:00:42 ETA
+Daily_Build/asfvolt1  63% |*******************            |   177M  0:00:41 ETA
+Daily_Build/asfvolt1  64% |********************           |   180M  0:00:40 ETA
+Daily_Build/asfvolt1  65% |********************           |   182M  0:00:39 ETA
+Daily_Build/asfvolt1  66% |********************           |   185M  0:00:38 ETA
+Daily_Build/asfvolt1  67% |********************           |   187M  0:00:37 ETA
+Daily_Build/asfvolt1  68% |*********************          |   190M  0:00:36 ETA
+Daily_Build/asfvolt1  69% |*********************          |   192M  0:00:35 ETA
+Daily_Build/asfvolt1  69% |*********************          |   195M  0:00:34 ETA
+Daily_Build/asfvolt1  70% |*********************          |   197M  0:00:33 ETA
+Daily_Build/asfvolt1  71% |**********************         |   199M  0:00:32 ETA
+Daily_Build/asfvolt1  72% |**********************         |   202M  0:00:31 ETA
+Daily_Build/asfvolt1  73% |**********************         |   205M  0:00:30 ETA
+Daily_Build/asfvolt1  74% |***********************        |   207M  0:00:29 ETA
+Daily_Build/asfvolt1  75% |***********************        |   210M  0:00:28 ETA
+Daily_Build/asfvolt1  76% |***********************        |   212M  0:00:27 ETA
+Daily_Build/asfvolt1  76% |***********************        |   214M  0:00:26 ETA
+Daily_Build/asfvolt1  77% |************************       |   217M  0:00:25 ETA
+Daily_Build/asfvolt1  78% |************************       |   219M  0:00:24 ETA
+Daily_Build/asfvolt1  79% |************************       |   222M  0:00:23 ETA
+Daily_Build/asfvolt1  80% |************************       |   224M  0:00:22 ETA
+Daily_Build/asfvolt1  81% |*************************      |   227M  0:00:21 ETA
+Daily_Build/asfvolt1  82% |*************************      |   229M  0:00:20 ETA
+Daily_Build/asfvolt1  83% |*************************      |   232M  0:00:19 ETA
+Daily_Build/asfvolt1  84% |**************************     |   234M  0:00:18 ETA
+Daily_Build/asfvolt1  84% |**************************     |   237M  0:00:17 ETA
+Daily_Build/asfvolt1  85% |**************************     |   239M  0:00:16 ETA
+Daily_Build/asfvolt1  86% |**************************     |   242M  0:00:15 ETA
+Daily_Build/asfvolt1  87% |***************************    |   244M  0:00:14 ETA
+Daily_Build/asfvolt1  88% |***************************    |   246M  0:00:13 ETA
+Daily_Build/asfvolt1  89% |***************************    |   249M  0:00:12 ETA
+Daily_Build/asfvolt1  90% |***************************    |   251M  0:00:11 ETA
+Daily_Build/asfvolt1  91% |****************************   |   254M  0:00:10 ETA
+Daily_Build/asfvolt1  91% |****************************   |   256M  0:00:09 ETA
+Daily_Build/asfvolt1  92% |****************************   |   259M  0:00:08 ETA
+Daily_Build/asfvolt1  93% |*****************************  |   261M  0:00:07 ETA
+Daily_Build/asfvolt1  94% |*****************************  |   263M  0:00:06 ETA
+Daily_Build/asfvolt1  95% |*****************************  |   266M  0:00:05 ETA
+Daily_Build/asfvolt1  96% |*****************************  |   268M  0:00:04 ETA
+Daily_Build/asfvolt1  97% |****************************** |   271M  0:00:03 ETA
+Daily_Build/asfvolt1  97% |****************************** |   273M  0:00:02 ETA
+Daily_Build/asfvolt1  98% |****************************** |   275M  0:00:01 ETA
+Daily_Build/asfvolt1  99% |****************************** |   278M  0:00:00 ETA
+Daily_Build/asfvolt1 100% |*******************************|   279M  0:00:00 ETA
+Daily_Build/asfvolt1 100% |*******************************|   279M  0:00:00 ETA
+
+Terminated
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[2_Install_Onl_Allinone_Package] $ /bin/bash /tmp/jenkins7260076799022485434.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Finished: SUCCESS

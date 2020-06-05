@@ -1,0 +1,310 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4Ev43DNMMd8HB6iESOCWWrJsG1ZHlunZXERSefTRhUQ1AAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MwMAV180XNgAAAA=[0mBuild_Server_172.17.10.60 (ONL) in workspace /home/voltha/workspace/XGSPON/6_Bal_Resf_API_Test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[SSH] script:
+
+#!/bin/bash
+service psme stop
+sleep 1
+service psme start
+/etc/init.d/dev_mgmt stop
+sleep 2
+cd /opt/bcm68620/
+./svk_init.sh
+/etc/init.d/dev_mgmt start
+sleep 30
+
+[SSH] executing...
+psme-rest-server is not running
+psme-chassis is not running
+Starting daemon server: psme-rest-server \nStarting daemon server: psme-chassis \nStopping 'dev_mgmt_daemon'... done
+Starting 'dev_mgmt_daemon'... done
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[6_Bal_Resf_API_Test] $ /bin/sh -xe /tmp/jenkins2179950861767119034.sh
++ rm -rf RF_Auto_Test
++ git clone https://github.com/abrother94/RF_Auto_Test.git
+Cloning into 'RF_Auto_Test'...
++ cd RF_Auto_Test/bal_test
++ ./eit.sh XGSPON 1 172.17.8.5 71E83268
+XGSPON Testing
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   255  100   211  100    44   2441    509 --:--:-- --:--:-- --:--:--  2453
+{"error":{"code":"Base.1.0.ResourceAtUriUnauthorized","message":"While accessing the resource at Requested operation is not authorized., the service received an authorization error.","@Message.ExtendedInfo":[]}}==============================================================================
+Bal Test                                                                      
+==============================================================================
+#(CST) 2020/05/30 21:21:43.801377 -    0.287906 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/05/30 21:21:43.878577 -    0.077200 - Executing: get(u'/redfish/v1/')
+Bal Test.Test Bal :: Test BAL Rstful functionality.                           
+==============================================================================
+Verify Restful API for BAL Test :: Test BAL Restful Status            #(CST) 2020/05/30 21:21:45.065089 -    1.186512 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/')
+"####### Disable All Pon Port 20 ######"
+#(CST) 2020/05/30 21:21:45.368121 -    0.303032 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1')
+Enabled
+PON port
+Up
+#(CST) 2020/05/30 21:21:45.455484 -    0.087363 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/1', body={u'OperationalState': u'Down'})
+#(CST) 2020/05/30 21:21:45.487743 -    0.032259 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/2')
+Enabled
+PON port
+Up
+#(CST) 2020/05/30 21:21:45.532807 -    0.045064 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/2', body={u'OperationalState': u'Down'})
+#(CST) 2020/05/30 21:21:45.565034 -    0.032227 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/3')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.591191 -    0.026157 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/4')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.616301 -    0.025110 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/5')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.676485 -    0.060184 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/6')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.709046 -    0.032561 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/7')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.731247 -    0.022201 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/8')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.794576 -    0.063329 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/9')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.830178 -    0.035602 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/10')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.857467 -    0.027289 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/11')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.893121 -    0.035654 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/12')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.919220 -    0.026099 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/13')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:45.974309 -    0.055089 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/14')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:46.031584 -    0.057275 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/15')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:46.057102 -    0.025518 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/16')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:46.082224 -    0.025122 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/17')
+Enabled
+QSFP port
+Up
+#(CST) 2020/05/30 21:21:46.108982 -    0.026758 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/18')
+Absent
+QSFP port
+None
+"####### Disabled ######"
+#(CST) 2020/05/30 21:21:46.132895 -    0.023913 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/19')
+Absent
+QSFP port
+None
+"####### Disabled ######"
+"####### XGSPON TESTING ######"
+"################### Wait Bal Enable ###################"
+#(CST) 2020/05/30 21:21:46.161272 -    0.028377 - Executing: get(u'/redfish/v1/Olt')
+"####### Up ######""################### resule[up] ###################"
+#(CST) 2020/05/30 21:21:47.227821 -    1.066549 - Executing: patch(u'/redfish/v1/Olt', body={u'OltOperateState': True})
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:48.875378 -    1.647557 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:49.926809 -    1.051431 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:50.976041 -    1.049232 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:52.026583 -    1.050542 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:53.072618 -    1.046035 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:54.126337 -    1.053719 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:55.175398 -    1.049061 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:56.225869 -    1.050471 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:57.271604 -    1.045735 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:58.321833 -    1.050229 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:21:59.376258 -    1.054425 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:00.427813 -    1.051555 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:01.480450 -    1.052637 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:02.533434 -    1.052984 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:03.576455 -    1.043021 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:04.623795 -    1.047340 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:05.683590 -    1.059795 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:07.753281 -    2.069691 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt False ######"
+"####### Opt Down ######"
+"################### resule[False] ###################"
+"################### Wait Bal Opt Enable ###################"
+#(CST) 2020/05/30 21:22:08.805717 -    1.052436 - Executing: get(u'/redfish/v1/Olt')
+"####### Opt True ######"
+"####### Opt Up ######"
+"################### resule[True] ###################"
+#(CST) 2020/05/30 21:22:14.866308 -    6.060591 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1')
+Enabled
+PON port
+"####### Enable Port 1 ######"
+#(CST) 2020/05/30 21:22:19.934179 -    5.067871 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/1', body={u'AdministrativeState': u'Up'})
+#(CST) 2020/05/30 21:22:20.222384 -    0.288205 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1')
+#(CST) 2020/05/30 21:22:25.275751 -    5.053367 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/')
+"####### num 20 ######"
+#(CST) 2020/05/30 21:22:25.313253 -    0.037502 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/17')
+Enabled
+QSFP port
+"####### Enable Port 17 ######"
+#(CST) 2020/05/30 21:22:25.345343 -    0.032090 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/17', body={u'AdministrativeState': u'Up'})
+#(CST) 2020/05/30 21:22:25.655767 -    0.310424 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/17')
+#(CST) 2020/05/30 21:22:25.689293 -    0.033526 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Restful API for ONU Range Test :: Test ONU Range               "####### active onu { "onu_id": 1, "vendor_id": "ISKT", "vendor_specific":"71E83268" } ######"
+#(CST) 2020/05/30 21:22:32.764141 -    7.074848 - Executing: post(u'/redfish/v1/EthernetSwitches/1/Ports/1/ONUs', body={u'onu_id': 1, u'vendor_id': u'ISKT', u'vendor_specific': u'71E83268'})
+#(CST) 2020/05/30 21:22:38.812778 -    6.048637 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1/ONUs')
+"####### onu res 200
+date Sat, 30 May 2020 13:22:39 GMT
+connection Keep-Alive
+content-type application/json
+content-length 344
+
+
+{"@odata.context":"/redfish/v1/$metadata#EthernetSwitchONUCollection.EthernetSwitchONUCollection","@odata.id":"/redfish/v1/EthernetSwitches/1/Ports/1/ONUs","@odata.type":"#EthernetSwitchONUCollection.EthernetSwitchONUCollection","Name":"PON Port Onus Collection","Description":"Collection of PON Port Onus","Members@odata.count":0,"Members":[]} ######"
+"####### Onu num 0 ######"
+#(CST) 2020/05/30 21:22:38.864067 -    0.051289 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| FAIL |
+0 != 1
+------------------------------------------------------------------------------
+Verify Restful API for flow add :: Test flow add                      #(CST) 2020/05/30 21:22:39.955343 -    1.091276 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 0, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:39.992069 -    0.036726 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 0, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:41.036546 -    1.044477 - Executing: delete(u'/redfish/v1/Olt/Flow/0_upstream')
+#(CST) 2020/05/30 21:22:41.063668 -    0.027122 - Executing: delete(u'/redfish/v1/Olt/Flow/0_downstream')
+#(CST) 2020/05/30 21:22:42.143054 -    1.079386 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 500, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:42.188372 -    0.045318 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 500, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:43.244437 -    1.056065 - Executing: delete(u'/redfish/v1/Olt/Flow/500_upstream')
+#(CST) 2020/05/30 21:22:43.276343 -    0.031906 - Executing: delete(u'/redfish/v1/Olt/Flow/500_downstream')
+#(CST) 2020/05/30 21:22:44.356462 -    1.080119 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 1000, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:44.392194 -    0.035732 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 1000, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:45.439840 -    1.047646 - Executing: delete(u'/redfish/v1/Olt/Flow/1000_upstream')
+#(CST) 2020/05/30 21:22:45.462593 -    0.022753 - Executing: delete(u'/redfish/v1/Olt/Flow/1000_downstream')
+#(CST) 2020/05/30 21:22:46.527735 -    1.065142 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 1500, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:46.561667 -    0.033932 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 1500, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:47.608306 -    1.046639 - Executing: delete(u'/redfish/v1/Olt/Flow/1500_upstream')
+#(CST) 2020/05/30 21:22:47.634234 -    0.025928 - Executing: delete(u'/redfish/v1/Olt/Flow/1500_downstream')
+#(CST) 2020/05/30 21:22:48.701567 -    1.067333 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 2000, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:48.747806 -    0.046239 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 2000, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:49.789896 -    1.042090 - Executing: delete(u'/redfish/v1/Olt/Flow/2000_upstream')
+#(CST) 2020/05/30 21:22:49.821446 -    0.031550 - Executing: delete(u'/redfish/v1/Olt/Flow/2000_downstream')
+#(CST) 2020/05/30 21:22:49.933710 -    0.112264 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 2048, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:49.983814 -    0.050104 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 2048, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:50.008525 -    0.024711 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'single_tag', u'GemportId': 1024, u'FlowId': 16, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 20, u'IPbits': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'upstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_ADD_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:50.066674 -    0.058149 - Executing: post(u'/redfish/v1/Olt/Flow/', body={u'Action': u'BCMOLT_ACTION_ID_O_VID', u'PortId': 0, u'PktTagType': u'double_tag', u'GemportId': 1024, u'FlowId': 16, u'NniId': 0, u'ClassVal': [{u'ITpid': 0, u'OVid': 10, u'IPbits': 0, u'IVid': 20, u'OPbits': 0, u'SrcPort': 0, u'OTpid': 0, u'EtherType': 0, u'IpProto': 0, u'DstPort': 0}], u'onuId': 1, u'FlowType': u'downstream', u'ActionVal': {u'DstPort': 0, u'OVid': 10, u'OTpid': 0, u'IVid': 0, u'OPbits': 0, u'SrcPort': 0, u'EtherType': 0, u'IPbits': 0, u'IpProto': 0, u'ITpid': 0}, u'Classifier': [u'BCMOLT_CLASSIFIER_ID_O_VID', u'BCMOLT_CLASSIFIER_ID_I_VID'], u'ActionCmd': u'BCMOLT_ACTION_CMD_ID_REMOVE_OUTER_TAG'})
+#(CST) 2020/05/30 21:22:50.091591 -    0.024917 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Restful API for omci send :: Test omci send                    ====================length 22 ================
+"################### raw[{u'Omci': u'00B34F0A00020000000000000000000000000000000000000000000000000000000000000000000000000028'}] ###################"
+#(CST) 2020/05/30 21:22:50.482228 -    0.390637 - Executing: post(u'/redfish/v1/EthernetSwitches/1/Ports/1/ONUs/1/Omci', body={u'Omci': u'00B34F0A00020000000000000000000000000000000000000000000000000000000000000000000000000028'})
+"################### raw[{u'Omci': u'00B44F0A00020000000000000000000000000000000000000000000000000000000000000000000000000028'}] ###################"
+#(CST) 2020/05/30 21:22:50.823377 -    0.341149 - Executing: post(u'/redfish/v1/EthernetSwitches/1/Ports/1/ONUs/1/Omci', body={u'Omci': u'00B44F0A00020000000000000000000000000000000000000000000000000000000000000000000000000028'})
+"################### raw[{u'Omci': u'00B5440A01360201000201000000000000000000000000000000000000000000000000000000000000000028'}] ###################"
+Build was aborted
+Aborted by [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Finished: ABORTED

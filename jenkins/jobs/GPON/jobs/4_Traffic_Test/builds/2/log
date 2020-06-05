@@ -1,0 +1,114 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4Ev43DNMMd8HB6iESOCWWrJsG1ZHlunZXERSefTRhUQ1AAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MwMAV180XNgAAAA=[0mBuild_Server_172.17.10.60 (ONL) in workspace /home/voltha/workspace/GPON/4_Traffic_Test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential 4f601890-1338-41ea-913a-33a98efd3251
+Cloning the remote Git repository
+Cloning repository https://github.com/abrother94/Traffic_Test/
+ > git init /home/voltha/workspace/GPON/4_Traffic_Test # timeout=10
+Fetching upstream changes from https://github.com/abrother94/Traffic_Test/
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/abrother94/Traffic_Test/ +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/abrother94/Traffic_Test/ # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/abrother94/Traffic_Test/ # timeout=10
+Fetching upstream changes from https://github.com/abrother94/Traffic_Test/
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/abrother94/Traffic_Test/ +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 6dd546bba47c5b43550fe81656912f13e6be2297 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6dd546bba47c5b43550fe81656912f13e6be2297 # timeout=10
+Commit message: "Add content"
+ > git rev-list --no-walk 6dd546bba47c5b43550fe81656912f13e6be2297 # timeout=10
+[SSH] script:
+
+#!/bin/bash
+#Disable GPON NNI PORT
+cd Traffic_Test/
+curl --insecure  -v  -X PATCH -d '{"AdministrativeState" : "Down"}'  https://172.17.8.5:8888/redfish/v1/EthernetSwitches/1/Ports/17/
+`./ping_test.sh 192.168.1.78`
+RES=`echo $?`
+if [ "$RES" == 0 ];then
+    echo "PASS"
+    exit 0
+else
+    echo "FAIL"
+    exit 1
+fi
+
+
+[SSH] executing...
+* Expire in 0 ms for 6 (transfer 0x16c2880)
+*   Trying 172.17.8.5...
+* TCP_NODELAY set
+* Expire in 200 ms for 4 (transfer 0x16c2880)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 172.17.8.5 (172.17.8.5) port 8888 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: none
+  CApath: /etc/ssl/certs
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [87 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [1394 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [589 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=TW; ST=TAICHUNG; L=TAICHUNG; O=selfsignedCA; OU=Personal; CN=192.168.1.99
+*  start date: Jun  1 05:08:11 2020 GMT
+*  expire date: May 30 05:08:11 2030 GMT
+*  issuer: C=TW; ST=TAICHUNG; L=TAICHUNG; O=selfsignedCA; OU=Personal; CN=192.168.1.99
+*  SSL certificate verify result: self signed certificate (18), continuing anyway.
+} [5 bytes data]
+> PATCH /redfish/v1/EthernetSwitches/1/Ports/17/ HTTP/1.1
+> Host: 172.17.8.5:8888
+> User-Agent: curl/7.64.0
+> Accept: */*
+> Content-Length: 32
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [32 bytes data]
+* upload completely sent off: 32 out of 32 bytes
+{ [5 bytes data]
+< HTTP/1.1 401 Unauthorized
+< Connection: Keep-Alive
+< Content-Length: 211
+< Content-Type: application/json
+< Date: Fri, 05 Jun 2020 01:50:43 GMT
+< 
+{ [5 bytes data]
+100   243  100   211  100    32   2068    313 --:--:-- --:--:-- --:--:--  2479
+* Connection #0 to host 172.17.8.5 left intact
+{"error":{"code":"Base.1.0.ResourceAtUriUnauthorized","message":"While accessing the resource at Requested operation is not authorized., the service received an authorization error.","@Message.ExtendedInfo":[]}}PASS
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[4_Traffic_Test] $ /bin/bash /tmp/jenkins107303590103627286.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Finished: SUCCESS

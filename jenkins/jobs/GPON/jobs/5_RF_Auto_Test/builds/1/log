@@ -1,0 +1,2179 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4Et6k1DbdfXp6PivblFThfGlOJUfomiLhF9K3TULExnDAAAArR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZF/eT83ILSktQi/aD8pPyS+IBgX9d4x9KS/PiQ1OKSeDMDAChq5OLWAAAA[0mRobot_PSME_Auto_Test_60 (ROBOT) in workspace /home/voltha/workspace/GPON/5_RF_Auto_Test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential 4f601890-1338-41ea-913a-33a98efd3251
+Cloning the remote Git repository
+Cloning repository https://github.com/abrother94/RF_Auto_Test
+ > git init /home/voltha/workspace/GPON/5_RF_Auto_Test # timeout=10
+Fetching upstream changes from https://github.com/abrother94/RF_Auto_Test
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/abrother94/RF_Auto_Test +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/abrother94/RF_Auto_Test # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/abrother94/RF_Auto_Test # timeout=10
+Fetching upstream changes from https://github.com/abrother94/RF_Auto_Test
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/abrother94/RF_Auto_Test +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 45010303f7ecd8b73765ebe6c19b7f6212519b8c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 45010303f7ecd8b73765ebe6c19b7f6212519b8c # timeout=10
+Commit message: "Update test_bal.robot"
+First time build. Skipping changelog.
+[5_RF_Auto_Test] $ /bin/bash /tmp/jenkins3552115041943159821.sh
+ONL_COMMIT_ID[72b95a7]
+PLTFORM[asgvolt64]
+PSME_VER[2.1.3.59.25]
+BAL_SDK_VER[3.4.3.3]
+MDATE[2020-2-11]
+Use target device IP 172.17.8.6:8888
+Use listener IP 172.17.10.60:8889
+PSME FirmwareVersion 2.1.3.59.25
+./all.sh: line 38: output.xml: command not found
+./all.sh: line 38: report.html: command not found
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    44    0     0  100    44      0    376 --:--:-- --:--:-- --:--:--   379
+==============================================================================
+Redfish                                                                       
+==============================================================================
+Redfish.0 Switches                                                            
+==============================================================================
+#(CST) 2020/06/05 09:51:05.457021 -    0.193685 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:51:05.529164 -    0.072143 - Executing: get(u'/redfish/v1/')
+Redfish.0 Switches.Test Switches :: Test PSME switches port functionality.    
+==============================================================================
+Verify Stress loop test :: Test SFP port tx disable stress test       "################### COUNT[1] ###################"
+#(CST) 2020/06/05 09:51:06.560668 -    1.031504 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/')
+74
+#(CST) 2020/06/05 09:51:07.062839 -    0.502171 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1')
+Enabled
+PON port
+Up
+#(CST) 2020/06/05 09:51:07.151022 -    0.088183 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/1', body={u'OperationalState': u'Down'})
+#(CST) 2020/06/05 09:51:07.197028 -    0.046006 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/2')
+Enabled
+PON port
+Up
+#(CST) 2020/06/05 09:51:07.249618 -    0.052590 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/2', body={u'OperationalState': u'Down'})
+#(CST) 2020/06/05 09:51:07.294755 -    0.045137 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/3')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.339594 -    0.044839 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/4')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.378367 -    0.038773 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/5')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.418550 -    0.040183 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/6')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.472155 -    0.053605 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/7')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.513275 -    0.041120 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/8')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.554159 -    0.040884 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/9')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.594963 -    0.040804 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/10')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.635835 -    0.040872 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/11')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.678630 -    0.042795 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/12')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.723009 -    0.044379 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/13')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.767096 -    0.044087 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/14')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.808557 -    0.041461 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/15')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.850492 -    0.041935 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/16')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.892483 -    0.041991 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/17')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.933933 -    0.041450 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/18')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:07.974621 -    0.040688 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/19')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.015344 -    0.040723 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/20')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.059969 -    0.044625 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/21')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.101265 -    0.041296 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/22')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.141733 -    0.040468 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/23')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.183232 -    0.041499 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/24')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.227026 -    0.043794 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/25')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.272375 -    0.045349 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/26')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.318374 -    0.045999 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/27')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.365075 -    0.046701 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/28')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.408810 -    0.043735 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/29')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.453943 -    0.045133 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/30')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.507663 -    0.053720 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/31')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.556751 -    0.049088 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/32')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.600061 -    0.043310 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/33')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.642442 -    0.042381 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/34')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.687031 -    0.044589 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/35')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.731759 -    0.044728 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/36')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.776612 -    0.044853 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/37')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.820778 -    0.044166 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/38')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.862807 -    0.042029 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/39')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.905448 -    0.042641 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/40')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.947680 -    0.042232 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/41')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:08.990852 -    0.043172 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/42')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.034160 -    0.043308 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/43')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.071542 -    0.037382 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/44')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.110644 -    0.039102 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/45')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.151742 -    0.041098 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/46')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.184900 -    0.033158 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/47')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.220268 -    0.035368 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/48')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.259838 -    0.039570 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/49')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.301910 -    0.042072 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/50')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.344051 -    0.042141 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/51')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.385520 -    0.041469 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/52')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.422554 -    0.037034 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/53')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.463198 -    0.040644 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/54')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.502826 -    0.039628 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/55')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.539557 -    0.036731 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/56')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.583432 -    0.043875 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/57')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.625424 -    0.041992 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/58')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.667276 -    0.041852 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/59')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.710617 -    0.043341 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/60')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.751498 -    0.040881 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/61')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.793400 -    0.041902 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/62')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.833236 -    0.039836 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/63')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.872633 -    0.039397 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/64')
+Absent
+PON port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.912975 -    0.040342 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/65')
+Enabled
+QSFP port
+Up
+#(CST) 2020/06/05 09:51:09.957913 -    0.044938 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/66')
+Absent
+QSFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:09.999190 -    0.041277 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/67')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.046320 -    0.047130 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/68')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.090797 -    0.044477 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/69')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.133167 -    0.042370 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/70')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.190645 -    0.057478 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/71')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.234048 -    0.043403 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/72')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.275593 -    0.041545 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/73')
+Absent
+SFP port
+None
+"####### Disabled ######"
+#(CST) 2020/06/05 09:51:10.314872 -    0.039279 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1')
+#(CST) 2020/06/05 09:51:10.393504 -    0.078632 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| FAIL |
+Up != Down
+------------------------------------------------------------------------------
+Redfish.0 Switches.Test Switches :: Test PSME switches port functi... | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Redfish.0 Switches                                                    | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Redfish.1 Account Service                                                     
+==============================================================================
+Redfish.1 Account Service.Test User Account :: Test Redfish user account.     
+==============================================================================
+Verify AccountService Available :: Verify Redfish account service ... #(CST) 2020/06/05 09:51:10.448471 -    0.054967 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:51:10.539156 -    0.090685 - Executing: get(u'/redfish/v1/AccountService')
+| PASS |
+------------------------------------------------------------------------------
+Verify AccountService_session_timeout :: Verify Redfish session ti... #(CST) 2020/06/05 09:51:10.618239 -    0.079083 - Executing: post(u'/redfish/v1/SessionService/', body={u'SessionTimeout': 6, u'ServiceEnabled': True}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:51:20.660258 -   10.042019 - Executing: get(u'/redfish/v1/Chassis/')
+#(CST) 2020/06/05 09:51:20.735295 -    0.075037 - Executing: post(u'/redfish/v1/SessionService/', body={u'SessionTimeout': 60, u'ServiceEnabled': True}, valid_status_codes=u'[200]')
+| PASS |
+------------------------------------------------------------------------------
+Redfish Create and Verify Users :: Create Redfish users with vario... #(CST) 2020/06/05 09:51:20.780821 -    0.045526 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user', u'Locked': False, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:20.904321 -    0.123500 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user')
+#(CST) 2020/06/05 09:51:20.947299 -    0.042978 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user')
+#(CST) 2020/06/05 09:51:20.990212 -    0.042913 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_1', u'Locked': False, u'Name': u'nameadmin_1', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:21.114614 -    0.124402 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user_1')
+#(CST) 2020/06/05 09:51:21.155077 -    0.040463 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_1')
+#(CST) 2020/06/05 09:51:21.199054 -    0.043977 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'operator_user_2', u'Locked': False, u'Name': u'nameopt_1', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:21.319876 -    0.120822 - Executing: get(u'/redfish/v1/AccountService/Accounts/operator_user_2')
+#(CST) 2020/06/05 09:51:21.357479 -    0.037603 - Executing: delete(u'/redfish/v1/AccountService/Accounts/operator_user_2')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish User with Wrong Password :: Verify Redfish User wit... #(CST) 2020/06/05 09:51:21.400682 -    0.043203 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_3', u'Locked': False, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:21.505744 -    0.105062 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_3')
+#(CST) 2020/06/05 09:51:21.553400 -    0.047656 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_4', u'Locked': False, u'Name': u'nameadmin_1', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:21.644175 -    0.090775 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_4')
+#(CST) 2020/06/05 09:51:21.685318 -    0.041143 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'operator_user_5', u'Locked': False, u'Name': u'nameopt_1', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:21.774140 -    0.088822 - Executing: delete(u'/redfish/v1/AccountService/Accounts/operator_user_5')
+| PASS |
+------------------------------------------------------------------------------
+Verify Login with Deleted Redfish Users :: Verify login with delet... #(CST) 2020/06/05 09:51:21.817848 -    0.043708 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_6', u'Locked': False, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:21.864410 -    0.046562 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_6')
+#(CST) 2020/06/05 09:51:21.969873 -    0.105463 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_7', u'Locked': False, u'Name': u'nameadmin_1', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:22.012491 -    0.042618 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_7')
+#(CST) 2020/06/05 09:51:22.123928 -    0.111437 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'operator_user_8', u'Locked': False, u'Name': u'nameopt_1', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:22.169023 -    0.045095 - Executing: delete(u'/redfish/v1/AccountService/Accounts/operator_user_8')
+| PASS |
+------------------------------------------------------------------------------
+Verify User Creation Without Enabling it :: Verify User Creation W... #(CST) 2020/06/05 09:51:22.281906 -    0.112883 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_9', u'Locked': False, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': False, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:22.397523 -    0.115617 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user_9')
+#(CST) 2020/06/05 09:51:22.435317 -    0.037794 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_9')
+#(CST) 2020/06/05 09:51:22.476706 -    0.041389 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_10', u'Locked': False, u'Name': u'nameadmin_1', u'RoleId': u'ReadOnlyUser', u'Enabled': False, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:22.593724 -    0.117018 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user_10')
+#(CST) 2020/06/05 09:51:22.634725 -    0.041001 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_10')
+#(CST) 2020/06/05 09:51:22.677739 -    0.043014 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'operator_user_11', u'Locked': False, u'Name': u'nameopt_1', u'RoleId': u'Operator', u'Enabled': False, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:22.795245 -    0.117506 - Executing: get(u'/redfish/v1/AccountService/Accounts/operator_user_11')
+#(CST) 2020/06/05 09:51:22.834945 -    0.039700 - Executing: delete(u'/redfish/v1/AccountService/Accounts/operator_user_11')
+| PASS |
+------------------------------------------------------------------------------
+Verify User Creation With locking it :: Verify User Creation With ... #(CST) 2020/06/05 09:51:22.879389 -    0.044444 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_15', u'Locked': True, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:22.961836 -    0.082447 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_15')
+#(CST) 2020/06/05 09:51:23.004510 -    0.042674 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_16', u'Locked': True, u'Name': u'nameadmin_1', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:23.084136 -    0.079626 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_16')
+#(CST) 2020/06/05 09:51:23.123182 -    0.039046 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'operator_user_17', u'Locked': True, u'Name': u'nameopt_1', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:23.202957 -    0.079775 - Executing: delete(u'/redfish/v1/AccountService/Accounts/operator_user_17')
+| PASS |
+------------------------------------------------------------------------------
+Verify Create and Patch parameters :: Create Redfish users with va... #(CST) 2020/06/05 09:51:23.243232 -    0.040275 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user', u'Locked': False, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:23.288519 -    0.045287 - Executing: patch(u'/redfish/v1/AccountService/Accounts/admin_user', body={u'Name': u'TESTNAME'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:51:23.324067 -    0.035548 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user')
+#(CST) 2020/06/05 09:51:23.362264 -    0.038197 - Executing: patch(u'/redfish/v1/AccountService/Accounts/admin_user', body={u'UserName': u'TESTUSERNAME'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:51:23.398966 -    0.036702 - Executing: get(u'/redfish/v1/AccountService/Accounts/TESTUSERNAME')
+#(CST) 2020/06/05 09:51:23.436489 -    0.037523 - Executing: patch(u'/redfish/v1/AccountService/Accounts/TESTUSERNAME', body={u'RoleId': u'ReadOnlyUser'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:51:23.475536 -    0.039047 - Executing: get(u'/redfish/v1/AccountService/Accounts/TESTUSERNAME')
+#(CST) 2020/06/05 09:51:23.516578 -    0.041042 - Executing: patch(u'/redfish/v1/AccountService/Accounts/TESTUSERNAME', body={u'RoleId': u'Operator'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:51:23.557678 -    0.041100 - Executing: get(u'/redfish/v1/AccountService/Accounts/TESTUSERNAME')
+#(CST) 2020/06/05 09:51:23.596417 -    0.038739 - Executing: patch(u'/redfish/v1/AccountService/Accounts/TESTUSERNAME', body={u'UserName': u'admin_user', u'Locked': False, u'Name': u'nameadmin', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:51:23.644970 -    0.048553 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish User Persistence After Reboot :: Verify Redfish use... #(CST) 2020/06/05 09:51:23.724494 -    0.079524 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_12', u'Locked': False, u'Name': u'newname_1', u'RoleId': u'Administrator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:23.772863 -    0.048369 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'admin_user_13', u'Locked': False, u'Name': u'newname_2', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:23.821284 -    0.048421 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'operator_user_14', u'Locked': False, u'Name': u'newname_3', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'TestPwd123'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:51:23.864846 -    0.043562 - Executing: post(u'/redfish/v1/Systems/1/Actions/ComputerSystem.Reset', body={u'ResetType': u'GracefulRestart'})
+#(CST) 2020/06/05 09:54:25.013321 -  181.148475 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user_12')
+#(CST) 2020/06/05 09:54:25.124470 -    0.111149 - Executing: get(u'/redfish/v1/AccountService/Accounts/admin_user_13')
+#(CST) 2020/06/05 09:54:25.245284 -    0.120814 - Executing: get(u'/redfish/v1/AccountService/Accounts/operator_user_14')
+#(CST) 2020/06/05 09:54:25.281365 -    0.036081 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_12')
+#(CST) 2020/06/05 09:54:25.320685 -    0.039320 - Executing: delete(u'/redfish/v1/AccountService/Accounts/admin_user_13')
+#(CST) 2020/06/05 09:54:25.358319 -    0.037634 - Executing: delete(u'/redfish/v1/AccountService/Accounts/operator_user_14')
+#(CST) 2020/06/05 09:54:25.400725 -    0.042406 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify AccountService_ReadOnlyUser :: Verify Redfish ReadOnlyUser ... #(CST) 2020/06/05 09:54:25.481110 -    0.080385 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'readonly', u'Locked': False, u'Name': u'NewName', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'readonly'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:26.528316 -    1.047206 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:54:27.606029 -    1.077713 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:54:27.647907 -    0.041878 - Executing: get(u'/redfish/')
+#(CST) 2020/06/05 09:54:27.688550 -    0.040643 - Executing: get(u'/')
+#(CST) 2020/06/05 09:54:27.728621 -    0.040071 - Executing: get(u'/redfish/v1/EthernetSwitches/1')
+#(CST) 2020/06/05 09:54:27.771341 -    0.042720 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/')
+#(CST) 2020/06/05 09:54:28.276219 -    0.504878 - Executing: get(u'/redfish/v1/EthernetSwitches/1/Ports/1')
+#(CST) 2020/06/05 09:54:28.347556 -    0.071337 - Executing: get(u'/redfish/v1/EventService/')
+#(CST) 2020/06/05 09:54:28.385238 -    0.037682 - Executing: get(u'/redfish/v1/EventService/Subscriptions')
+#(CST) 2020/06/05 09:54:28.420832 -    0.035594 - Executing: get(u'/redfish/v1/AccountService/')
+#(CST) 2020/06/05 09:54:28.458323 -    0.037491 - Executing: get(u'/redfish/v1/AccountService/Accounts')
+#(CST) 2020/06/05 09:54:28.500908 -    0.042585 - Executing: get(u'/redfish/v1/AccountService/Roles')
+#(CST) 2020/06/05 09:54:28.545210 -    0.044302 - Executing: get(u'/redfish/v1/AccountService/Roles/1')
+#(CST) 2020/06/05 09:54:28.582669 -    0.037459 - Executing: get(u'/redfish/v1/AccountService/Roles/2')
+#(CST) 2020/06/05 09:54:28.622489 -    0.039820 - Executing: get(u'/redfish/v1/AccountService/Roles/3')
+#(CST) 2020/06/05 09:54:28.657875 -    0.035386 - Executing: get(u'/redfish/v1/Registries/')
+#(CST) 2020/06/05 09:54:28.695537 -    0.037662 - Executing: get(u'/redfish/v1/Registries/1')
+#(CST) 2020/06/05 09:54:28.731551 -    0.036014 - Executing: get(u'/redfish/v1/Chassis/')
+#(CST) 2020/06/05 09:54:28.769715 -    0.038164 - Executing: get(u'/redfish/v1/Chassis/1')
+#(CST) 2020/06/05 09:54:28.806405 -    0.036690 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+#(CST) 2020/06/05 09:54:28.846686 -    0.040281 - Executing: get(u'/redfish/v1/Chassis/1/Power')
+#(CST) 2020/06/05 09:54:28.885906 -    0.039220 - Executing: get(u'/redfish/v1/Chassis/1/Drives/1/')
+#(CST) 2020/06/05 09:54:28.925371 -    0.039465 - Executing: get(u'/redfish/v1/Managers')
+#(CST) 2020/06/05 09:54:28.965889 -    0.040518 - Executing: get(u'/redfish/v1/Managers/1')
+#(CST) 2020/06/05 09:54:29.007619 -    0.041730 - Executing: get(u'/redfish/v1/Managers/1/EthernetInterfaces')
+#(CST) 2020/06/05 09:54:29.046992 -    0.039373 - Executing: get(u'/redfish/v1/Managers/1/EthernetInterfaces/1')
+#(CST) 2020/06/05 09:54:29.190696 -    0.143704 - Executing: get(u'/redfish/v1/Managers/1/SerialInterfaces/1')
+#(CST) 2020/06/05 09:54:29.229833 -    0.039137 - Executing: get(u'/redfish/v1/Systems/1')
+#(CST) 2020/06/05 09:54:29.281659 -    0.051826 - Executing: get(u'/redfish/v1/Systems/1/Processors')
+#(CST) 2020/06/05 09:54:29.321341 -    0.039682 - Executing: get(u'/redfish/v1/Systems/1/Processors/1')
+#(CST) 2020/06/05 09:54:29.569514 -    0.248173 - Executing: get(u'/redfish/v1/Systems/1/Storage/1')
+#(CST) 2020/06/05 09:54:29.611677 -    0.042163 - Executing: get(u'/redfish/v1/SessionService/')
+#(CST) 2020/06/05 09:54:29.654095 -    0.042418 - Executing: get(u'/redfish/v1/SessionService/Sessions')
+#(CST) 2020/06/05 09:54:29.729719 -    0.075624 - Executing: delete(u'/redfish/v1/AccountService/Accounts/readonly')
+#(CST) 2020/06/05 09:54:29.768096 -    0.038377 - Executing: delete(u'/redfish/v1/SessionService/Sessions/5')
+| PASS |
+------------------------------------------------------------------------------
+Verify AccountService_ReadOnlyUser_Cannot_POST_PATCH :: Verify Red... #(CST) 2020/06/05 09:54:29.844579 -    0.076483 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'readonly', u'Locked': False, u'Name': u'NewName', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'readonly'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:29.892993 -    0.048414 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'testreadonly', u'Locked': False, u'Name': u'NewName', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'testreadonly'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:29.945447 -    0.052454 - Executing: delete(u'/redfish/v1/SessionService/Sessions/5')
+#(CST) 2020/06/05 09:54:30.023861 -    0.078414 - Executing: patch(u'/redfish/v1/EthernetSwitches/1/Ports/1', body={u'OperationalState': u'Up'})
+#(CST) 2020/06/05 09:54:30.062857 -    0.038996 - Executing: post(u'/redfish/v1/Systems/1/Actions/ComputerSystem.Reset', body={u'ResetType': u'GracefulRestart'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:30.102247 -    0.039390 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'test1readonlypwd', u'Locked': False, u'Name': u'NewName', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'test1readonlypwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:30.141254 -    0.039007 - Executing: get(u'/redfish/v1/AccountService/Accounts/test1readonlypwd')
+#(CST) 2020/06/05 09:54:30.211410 -    0.070156 - Executing: get(u'/redfish/v1/AccountService/Accounts/')
+#(CST) 2020/06/05 09:54:30.253201 -    0.041791 - Executing: patch(u'/redfish/v1/AccountService/Accounts/readonly', body={u'UserName': u'readonly', u'Locked': False, u'Password': u'readonlyU2', u'Enabled': True, u'RoleId': u'ReadOnlyUser'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:54:30.297575 -    0.044374 - Executing: patch(u'/redfish/v1/AccountService/Accounts/readonly', body={u'RoleId': u'Administrator'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:30.331833 -    0.034258 - Executing: patch(u'/redfish/v1/AccountService/Accounts/readonly', body={u'RoleId': u'Administrator', u'Password': u'P2'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:30.379642 -    0.047809 - Executing: patch(u'/redfish/v1/AccountService/Accounts/readonly', body={u'Password': u'NewPasswordOP'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:54:30.423192 -    0.043550 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:54:30.495228 -    0.072036 - Executing: patch(u'/redfish/v1/AccountService/Accounts/testreadonly', body={u'UserName': u'testreadonly', u'Locked': False, u'Password': u'testreadonlyU2', u'Enabled': True, u'RoleId': u'ReadOnlyUser'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:30.544807 -    0.049579 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:54:30.613883 -    0.069076 - Executing: delete(u'/redfish/v1/AccountService/Accounts/readonly')
+#(CST) 2020/06/05 09:54:30.650584 -    0.036701 - Executing: delete(u'/redfish/v1/AccountService/Accounts/testreadonly')
+#(CST) 2020/06/05 09:54:30.687759 -    0.037175 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify AccountService_OPUser_Cannot_POST_PATCH :: Verify Redfish O... #(CST) 2020/06/05 09:54:30.759096 -    0.071337 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'Operator', u'Locked': False, u'Name': u'NewName', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'Operator'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:30.809203 -    0.050107 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'testreadonly', u'Locked': False, u'Name': u'NewName', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'testreadonly'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:30.864437 -    0.055234 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:54:30.962144 -    0.097707 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'test1readonlypwd', u'Locked': False, u'Name': u'NewName', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'test1readonlypwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:54:30.998857 -    0.036713 - Executing: get(u'/redfish/v1/AccountService/Accounts/test1readonlypwd')
+#(CST) 2020/06/05 09:54:31.041873 -    0.043016 - Executing: patch(u'/redfish/v1/AccountService/Accounts/Operator', body={u'UserName': u'Operator', u'Locked': False, u'Password': u'OperatorU2', u'Enabled': True, u'RoleId': u'Operator'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:54:31.091851 -    0.049978 - Executing: patch(u'/redfish/v1/AccountService/Accounts/Operator', body={u'Password': u'NewPasswordOP'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:54:31.137505 -    0.045654 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:54:31.209364 -    0.071859 - Executing: patch(u'/redfish/v1/AccountService/Accounts/Operator', body={u'RoleId': u'Administrator'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:31.248627 -    0.039263 - Executing: patch(u'/redfish/v1/AccountService/Accounts/Operator', body={u'RoleId': u'Administrator', u'Password': u'P2'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:31.293663 -    0.045036 - Executing: patch(u'/redfish/v1/AccountService/Accounts/testreadonly', body={u'UserName': u'testreadonly', u'Locked': False, u'Password': u'testreadonlyU2', u'Enabled': True, u'RoleId': u'ReadOnlyUser'}, valid_status_codes=u'[401]')
+#(CST) 2020/06/05 09:54:31.333034 -    0.039371 - Executing: post(u'/redfish/v1/Systems/1/Actions/ComputerSystem.Reset', body={u'ResetType': u'GracefulRestart'}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:57:31.408617 -  180.075583 - Executing: delete(u'/redfish/v1/AccountService/Accounts/Operator')
+#(CST) 2020/06/05 09:57:31.448351 -    0.039734 - Executing: delete(u'/redfish/v1/AccountService/Accounts/testreadonly')
+#(CST) 2020/06/05 09:57:31.492965 -    0.044614 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.1 Account Service.Test User Account :: Test Redfish user a... | PASS |
+12 critical tests, 12 passed, 0 failed
+12 tests total, 12 passed, 0 failed
+==============================================================================
+Redfish.1 Account Service                                             | PASS |
+12 critical tests, 12 passed, 0 failed
+12 tests total, 12 passed, 0 failed
+==============================================================================
+Redfish.2 Service Root                                                        
+==============================================================================
+Redfish.2 Service Root.Test Service Root :: Test Redfish to verify response...
+==============================================================================
+Redfish Login And Logout :: Login to BMCweb and then logout.          #(CST) 2020/06/05 09:57:31.566692 -    0.073727 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:57:31.671736 -    0.105044 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+GET Redfish Hypermedia Without Login :: GET hypermedia URL without... #(CST) 2020/06/05 09:57:31.714597 -    0.042861 - Executing: get(u'/', valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:57:31.754039 -    0.039442 - Executing: get(u'/redfish', valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:57:31.797191 -    0.043152 - Executing: get(u'/redfish/v1', valid_status_codes=u'[200]')
+| PASS |
+------------------------------------------------------------------------------
+GET Redfish SessionService Resource With Login :: Login to BMCweb ... #(CST) 2020/06/05 09:57:31.873365 -    0.076174 - Executing: get(u'/redfish/v1/SessionService')
+#(CST) 2020/06/05 09:57:31.912019 -    0.038654 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+GET Redfish SessionService Without Login :: Get /redfish/v1/Sessio... #(CST) 2020/06/05 09:57:31.954003 -    0.041984 - Executing: get(u'/redfish/v1/SessionService', valid_status_codes=u'[401]')
+| PASS |
+------------------------------------------------------------------------------
+Delete Redfish Session Using Valid login :: Delete a session using... #(CST) 2020/06/05 09:57:32.059373 -    0.105370 - Executing: list_request(resource_path = u'/redfish/v1/SessionService/Sessions')
+#(CST) 2020/06/05 09:57:32.174930 -    0.115557 - Executing: delete('/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:57:32.211946 -    0.037016 - Executing: list_request(resource_path = u'/redfish/v1/SessionService/Sessions')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.2 Service Root.Test Service Root :: Test Redfish to verify... | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
+==============================================================================
+Redfish.2 Service Root.Test Service Root Security :: Test Redfish service r...
+==============================================================================
+Redfish Login With Invalid Credentials :: Login to BMC web using i... #(CST) 2020/06/05 09:57:32.382260 -    0.170314 - Executing: get(u'/redfish/v1/')
+| PASS |
+------------------------------------------------------------------------------
+Attempt Login With Expired Session :: Authenticate to redfish, the... #(CST) 2020/06/05 09:57:32.642470 -    0.260210 - Executing: post(u'/redfish/v1/SessionService/', body={u'SessionTimeout': 30, u'ServiceEnabled': True}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:58:07.681190 -   35.038720 - Executing: get('/redfish/v1/SessionService/Sessions/1', valid_status_codes=u'[404]')
+#(CST) 2020/06/05 09:58:07.749716 -    0.068526 - Executing: post(u'/redfish/v1/SessionService/', body={u'SessionTimeout': 600, u'ServiceEnabled': True}, valid_status_codes=u'[200]')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.2 Service Root.Test Service Root Security :: Test Redfish ... | PASS |
+2 critical tests, 2 passed, 0 failed
+2 tests total, 2 passed, 0 failed
+==============================================================================
+Redfish.2 Service Root                                                | PASS |
+7 critical tests, 7 passed, 0 failed
+7 tests total, 7 passed, 0 failed
+==============================================================================
+Redfish.3 Event Service                                                       
+==============================================================================
+Redfish.3 Event Service.Test Event Service :: Test Redfish user account.      
+==============================================================================
+Verify Redfish Admin Add Event :: Subscribe Event                     #(CST) 2020/06/05 09:58:07.805024 -    0.055308 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:58:07.873372 -    0.068348 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'Alert'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is Alert Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:07.915624 -    0.042252 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceAdded'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceAdded Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:07.956139 -    0.040515 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceRemoved'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceRemoved Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:07.996423 -    0.040284 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish Admin Patch Event :: Subscribe Event                   #(CST) 2020/06/05 09:58:08.073400 -    0.076977 - Executing: patch(u'/redfish/v1/EventService/Subscriptions/1', body={u'Destination': u'https://172.17.10.60:8889', u'Name': u'This is Alert Subscription event patch test', u'Context': u'THIS IS PATCH TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:08.116237 -    0.042837 - Executing: patch(u'/redfish/v1/EventService/Subscriptions/2', body={u'Destination': u'https://172.17.10.60:8889', u'Name': u'This is ResourceAdded Subscription event patch test', u'Context': u'THIS IS PATCH TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:08.156019 -    0.039782 - Executing: patch(u'/redfish/v1/EventService/Subscriptions/3', body={u'Destination': u'https://172.17.10.60:8889', u'Name': u'This is ResourceRemoved Subscription event patch test', u'Context': u'THIS IS PATCH TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:08.202665 -    0.046646 - Executing: patch(u'/redfish/v1/EventService/Subscriptions/1', body={u'Name': u'This is Alert Subscription event patch test name'})
+#(CST) 2020/06/05 09:58:08.242737 -    0.040072 - Executing: patch(u'/redfish/v1/EventService/Subscriptions/2', body={u'Destination': u'https://172.17.10.60:8889ONLY'})
+#(CST) 2020/06/05 09:58:08.285368 -    0.042631 - Executing: patch(u'/redfish/v1/EventService/Subscriptions/3', body={u'Context': u'THIS IS PATCH TEST FROM AUTO TEST SUBS ONLY'})
+#(CST) 2020/06/05 09:58:08.324202 -    0.038834 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish Admin Del Event :: Del Subscribed Event                #(CST) 2020/06/05 09:58:08.399320 -    0.075118 - Executing: list_request(resource_path = u'redfish/v1/EventService/Subscriptions/')
+#(CST) 2020/06/05 09:58:08.608998 -    0.209678 - Executing: delete(u'redfish/v1/EventService/Subscriptions/1')
+#(CST) 2020/06/05 09:58:08.659013 -    0.050015 - Executing: delete(u'redfish/v1/EventService/Subscriptions/2')
+#(CST) 2020/06/05 09:58:08.699880 -    0.040867 - Executing: delete(u'redfish/v1/EventService/Subscriptions/3')
+#(CST) 2020/06/05 09:58:08.745856 -    0.045976 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish Op Add Event :: Subscribe Event                        #(CST) 2020/06/05 09:58:08.825764 -    0.079908 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'OpUser', u'Locked': False, u'Name': u'NewOp', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'OpUserPwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:58:08.870491 -    0.044727 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:08.943392 -    0.072901 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'Alert'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is Alert Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:08.989325 -    0.045933 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceAdded'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceAdded Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:09.030780 -    0.041455 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceRemoved'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceRemoved Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:09.070143 -    0.039363 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:09.139444 -    0.069301 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish Op Del Event :: Del Subscribed Event                   #(CST) 2020/06/05 09:58:09.214768 -    0.075324 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'OpUser', u'Locked': False, u'Name': u'NewOp', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'OpUserPwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:58:09.264452 -    0.049684 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:09.337894 -    0.073442 - Executing: list_request(resource_path = u'redfish/v1/EventService/Subscriptions/')
+#(CST) 2020/06/05 09:58:09.522133 -    0.184239 - Executing: delete(u'redfish/v1/EventService/Subscriptions/1')
+#(CST) 2020/06/05 09:58:09.562778 -    0.040645 - Executing: delete(u'redfish/v1/EventService/Subscriptions/2')
+#(CST) 2020/06/05 09:58:09.601549 -    0.038771 - Executing: delete(u'redfish/v1/EventService/Subscriptions/3')
+#(CST) 2020/06/05 09:58:09.637342 -    0.035793 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:09.707735 -    0.070393 - Executing: delete(u'/redfish/v1/AccountService/Accounts/OpUser')
+#(CST) 2020/06/05 09:58:09.742840 -    0.035105 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish ReadOnlyUser Add Event :: Subscribe Event              #(CST) 2020/06/05 09:58:09.812508 -    0.069668 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'ReadOnlyUser1', u'Locked': False, u'Name': u'NewReadOnlyUser', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'UserPwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:58:09.856122 -    0.043614 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:09.933119 -    0.076997 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'Alert'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is Alert Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:09.973222 -    0.040103 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceAdded'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceAdded Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:10.013841 -    0.040619 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceRemoved'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceRemoved Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:10.050954 -    0.037113 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:10.121757 -    0.070803 - Executing: delete(u'/redfish/v1/AccountService/Accounts/OpUser')
+#(CST) 2020/06/05 09:58:10.156080 -    0.034323 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+[ WARN ] Multiple test cases with name 'Verify Redfish Op Add Event' executed in test suite 'Redfish.3 Event Service.Test Event Service'.
+Verify Redfish Op Add Event :: Subscribe Event                        #(CST) 2020/06/05 09:58:10.229612 -    0.073532 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'OpUser', u'Locked': False, u'Name': u'NewOp', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'OpUserPwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:58:10.272872 -    0.043260 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:10.350878 -    0.078006 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'Alert'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is Alert Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:10.395084 -    0.044206 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceAdded'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceAdded Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:10.441432 -    0.046348 - Executing: post(u'/redfish/v1/EventService/Subscriptions/', body={u'EventTypes': [u'ResourceRemoved'], u'Destination': u'https://172.17.10.60:8889', u'Protocol': u'Redfish', u'Name': u'This is ResourceRemoved Subscription event test', u'Context': u'THIS IS TEST FROM AUTO TEST SUBS'})
+#(CST) 2020/06/05 09:58:10.480249 -    0.038817 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:10.560073 -    0.079824 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish ReadOnlyUser Del Event :: Del Subscribed Event         #(CST) 2020/06/05 09:58:10.640189 -    0.080116 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'ReadOnlyUser1', u'Locked': False, u'Name': u'NewReadOnlyUser', u'RoleId': u'ReadOnlyUser', u'Enabled': True, u'Password': u'UserPwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:58:10.681745 -    0.041556 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:10.755963 -    0.074218 - Executing: list_request(resource_path = u'redfish/v1/EventService/Subscriptions/')
+#(CST) 2020/06/05 09:58:10.931570 -    0.175607 - Executing: delete(u'redfish/v1/EventService/Subscriptions/1')
+#(CST) 2020/06/05 09:58:10.966918 -    0.035348 - Executing: delete(u'redfish/v1/EventService/Subscriptions/2')
+#(CST) 2020/06/05 09:58:11.001025 -    0.034107 - Executing: delete(u'redfish/v1/EventService/Subscriptions/3')
+#(CST) 2020/06/05 09:58:11.041504 -    0.040479 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:11.109852 -    0.068348 - Executing: delete(u'/redfish/v1/AccountService/Accounts/OpUser')
+#(CST) 2020/06/05 09:58:11.149965 -    0.040113 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+[ WARN ] Multiple test cases with name 'Verify Redfish Op Del Event' executed in test suite 'Redfish.3 Event Service.Test Event Service'.
+Verify Redfish Op Del Event :: Del Subscribed Event                   #(CST) 2020/06/05 09:58:11.232945 -    0.082980 - Executing: post(u'/redfish/v1/AccountService/Accounts', body={u'UserName': u'OpUser', u'Locked': False, u'Name': u'NewOp', u'RoleId': u'Operator', u'Enabled': True, u'Password': u'OpUserPwd'}, valid_status_codes=u'[201]')
+#(CST) 2020/06/05 09:58:11.277375 -    0.044430 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:11.349015 -    0.071640 - Executing: list_request(resource_path = u'redfish/v1/EventService/Subscriptions/')
+#(CST) 2020/06/05 09:58:11.540266 -    0.191251 - Executing: delete(u'redfish/v1/EventService/Subscriptions/1')
+#(CST) 2020/06/05 09:58:11.576685 -    0.036419 - Executing: delete(u'redfish/v1/EventService/Subscriptions/2')
+#(CST) 2020/06/05 09:58:11.616905 -    0.040220 - Executing: delete(u'redfish/v1/EventService/Subscriptions/3')
+#(CST) 2020/06/05 09:58:11.655428 -    0.038523 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+#(CST) 2020/06/05 09:58:11.724457 -    0.069029 - Executing: delete(u'/redfish/v1/AccountService/Accounts/OpUser')
+#(CST) 2020/06/05 09:58:11.761311 -    0.036854 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.3 Event Service.Test Event Service :: Test Redfish user ac... | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
+==============================================================================
+Redfish.3 Event Service                                               | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
+==============================================================================
+Redfish.4 Managers                                                            
+==============================================================================
+Redfish.4 Managers.Test Managers Psme :: Test PSME Manager functionality.     
+==============================================================================
+Verify PSME Redfish Version :: Get PSME version from manager board.   #(CST) 2020/06/05 09:58:11.887103 -    0.125792 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:58:11.949807 -    0.062704 - Executing: get(u'/redfish/v1/Managers/1')
+#(CST) 2020/06/05 09:58:11.986758 -    0.036951 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Redfish PSME Manager Properties :: Verify PSME managers res... #(CST) 2020/06/05 09:58:12.049991 -    0.063233 - Executing: get(u'/redfish/v1/Managers/1')
+#(CST) 2020/06/05 09:58:12.090075 -    0.040084 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Verify Set Static IPv4 IP address :: Verify PSME managers to set I... #(CST) 2020/06/05 09:58:12.161480 -    0.071405 - Executing: patch(u'/redfish/v1/Managers/1/EthernetInterfaces/1', body={u'StaticNameServers': [{u'Address': u'8.8.8.8'}], u'DHCPv4': {u'DHCPEnabled': False}, u'IPv4Addresses': [{u'SubnetMask': u'255.255.252.0', u'Gateway': u'172.17.10.251', u'Address': u'172.17.8.6'}]})
+#(CST) 2020/06/05 09:58:38.527185 -   26.365705 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.4 Managers.Test Managers Psme :: Test PSME Manager functio... | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Redfish.4 Managers                                                    | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Redfish.5 Chassis                                                             
+==============================================================================
+Redfish.5 Chassis.Test Chassis Psme :: Test PSME Manager functionality.       
+==============================================================================
+Verify Redfish PSME Chassis Properties :: Verify PSME chassis reso... #(CST) 2020/06/05 09:58:38.637764 -    0.110579 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:58:38.703339 -    0.065575 - Executing: get(u'/redfish/v1/Chassis/1')
+#(CST) 2020/06/05 09:58:39.059471 -    0.356132 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Check Thermal Sensor :: Verify Thermal sensor                         #(CST) 2020/06/05 09:58:39.123655 -    0.064184 - Executing: get(u'/redfish/v1/Chassis/1/Thermal/')
+10
+#(CST) 2020/06/05 09:58:39.158237 -    0.034582 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'System CPU Thermal Sensor Temperature', u'PhysicalContext': u'CPU', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 48, u'MemberId': u'1', u'UpperThresholdNonCritical': 82, u'UpperThresholdFatal': 104, u'SensorNumber': 1, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 92, u'LowerThresholdCritical': None}
+48
+#(CST) 2020/06/05 09:58:39.196592 -    0.038355 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 36, u'MemberId': u'2', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 2, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+36
+#(CST) 2020/06/05 09:58:39.233437 -    0.036845 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 30, u'MemberId': u'3', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 3, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+30
+#(CST) 2020/06/05 09:58:39.269587 -    0.036150 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 34, u'MemberId': u'4', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 4, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+34
+#(CST) 2020/06/05 09:58:39.306153 -    0.036566 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 33, u'MemberId': u'5', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 5, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+33
+#(CST) 2020/06/05 09:58:39.344792 -    0.038639 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 31, u'MemberId': u'6', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 6, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+31
+#(CST) 2020/06/05 09:58:39.385119 -    0.040327 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 34, u'MemberId': u'7', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 7, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+34
+#(CST) 2020/06/05 09:58:39.426315 -    0.041196 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'LowerThresholdFatal': None, u'Name': u'Chassis Thermal Sensor Temperature', u'PhysicalContext': u'SystemBoard', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': 33, u'MemberId': u'8', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 8, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+33
+#(CST) 2020/06/05 09:58:39.469351 -    0.043036 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'Warning'}, u'LowerThresholdFatal': None, u'Name': u'PSU Thermal Sensor Temperature', u'PhysicalContext': u'PowerSupply', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'ReadingCelsius': -0.5, u'MemberId': u'9', u'UpperThresholdNonCritical': 45, u'UpperThresholdFatal': 60, u'SensorNumber': 9, u'LowerThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdCritical': 55, u'LowerThresholdCritical': None}
+-0.5
+#(CST) 2020/06/05 09:58:39.508924 -    0.039573 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| FAIL |
+0 == 0
+------------------------------------------------------------------------------
+Check Fan :: Verify Fan and verify status                             #(CST) 2020/06/05 09:58:39.580333 -    0.071409 - Executing: get(u'/redfish/v1/Chassis/1/Thermal/')
+6
+"#################################################"
+#(CST) 2020/06/05 09:58:39.616864 -    0.036531 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'Name': u'System Fan', u'PhysicalContext': u'Back', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'MemberId': u'1', u'UpperThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdFatal': None, u'LowerThresholdFatal': None, u'LowerThresholdNonCritical': None, u'LowerThresholdCritical': None, u'Reading': 19800, u'UpperThresholdCritical': None, u'ReadingUnits': u'RPM'}
+19800
+#(CST) 2020/06/05 09:58:39.659092 -    0.042228 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'Name': u'System Fan', u'PhysicalContext': u'Back', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'MemberId': u'2', u'UpperThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdFatal': None, u'LowerThresholdFatal': None, u'LowerThresholdNonCritical': None, u'LowerThresholdCritical': None, u'Reading': 19700, u'UpperThresholdCritical': None, u'ReadingUnits': u'RPM'}
+19700
+#(CST) 2020/06/05 09:58:39.701286 -    0.042194 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'Name': u'System Fan', u'PhysicalContext': u'Back', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'MemberId': u'3', u'UpperThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdFatal': None, u'LowerThresholdFatal': None, u'LowerThresholdNonCritical': None, u'LowerThresholdCritical': None, u'Reading': 19800, u'UpperThresholdCritical': None, u'ReadingUnits': u'RPM'}
+19800
+#(CST) 2020/06/05 09:58:39.742015 -    0.040729 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'Name': u'System Fan', u'PhysicalContext': u'Back', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'MemberId': u'4', u'UpperThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdFatal': None, u'LowerThresholdFatal': None, u'LowerThresholdNonCritical': None, u'LowerThresholdCritical': None, u'Reading': 19800, u'UpperThresholdCritical': None, u'ReadingUnits': u'RPM'}
+19800
+#(CST) 2020/06/05 09:58:39.787275 -    0.045260 - Executing: get(u'/redfish/v1/Chassis/1/Thermal')
+{u'Status': {u'HealthRollup': None, u'State': u'Enabled', u'Health': u'OK'}, u'Name': u'PSU Fan', u'PhysicalContext': u'PowerSupply', u'@odata.id': u'/redfish/v1/Chassis/1/Thermal', u'MemberId': u'5', u'UpperThresholdNonCritical': None, u'RelatedItem': [{u'@odata.id': u'/redfish/v1/Chassis/1'}], u'UpperThresholdFatal': None, u'LowerThresholdFatal': None, u'LowerThresholdNonCritical': None, u'LowerThresholdCritical': None, u'Reading': 38143, u'UpperThresholdCritical': None, u'ReadingUnits': u'RPM'}
+38143
+#(CST) 2020/06/05 09:58:39.828747 -    0.041472 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Check PSU :: Verify PSU and verify status                             "######## Plug In PSU 1 with Power Core #######"
+#(CST) 2020/06/05 09:58:39.913226 -    0.084479 - Executing: get(u'/redfish/v1/Chassis/1/Power')
+Enabled
+17
+"######## Plug In PSU 2 with Power Core #######"
+#(CST) 2020/06/05 09:58:39.961146 -    0.047920 - Executing: get(u'/redfish/v1/Chassis/1/Power')
+Enabled
+17
+#(CST) 2020/06/05 09:58:40.003727 -    0.042581 - Executing: delete(u'/redfish/v1/SessionService/Sessions/1')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.5 Chassis.Test Chassis Psme :: Test PSME Manager functiona... | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Redfish.5 Chassis                                                     | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Redfish.6 Dmtf Tools                                                          
+==============================================================================
+Redfish.6 Dmtf Tools.Redfish Service Validator :: Test PSME using https://g...
+==============================================================================
+Test Redfish Using Redfish Service Validator :: Check conformance ... #(CST) 2020/06/05 09:58:40.073251 -    0.069524 - Executing: get(u'/redfish/v1/')
+#(CST) 2020/06/05 09:58:40.156100 -    0.082849 - Executing: post(u'/redfish/v1/SessionService/', body={u'SessionTimeout': 600, u'ServiceEnabled': False}, valid_status_codes=u'[200]')
+#(CST) 2020/06/05 09:58:40.193205 -    0.037105 - Issuing: rm -rf Redfish-Service-Validator ; git clone https://github.com/DMTF/Redfish-Service-Validator.git Redfish-Service-Validator;cd Redfish-Service-Validator;git reset --hard "1.3.4"
+Cloning into 'Redfish-Service-Validator'...
+HEAD is now at 67437a2 Merge pull request #357 from DMTF/1.3.4-Tagging
+#(CST) 2020/06/05 09:58:42.985257 -    2.792052 - Issuing: python3 Redfish-Service-Validator/RedfishServiceValidator.py --ip 172.17.8.6:8888 --nochkcert --forceauth -u admin -p redfish --logdir /home/voltha/workspace/GPON/5_RF_Auto_Test/logs/ --debug_logging
+First run suggested to create and own local schema files, please download manually or use --schema_pack latest
+Alternatively, use the option --prefer_online to skip local schema file checks
+The tool will, by default, attempt to download and store XML files to relieve traffic from DMTF/service
+Redfish Service Validator, version 1.3.4
+Setting up service...
+Constructing metadata...
+Writing online XML to file: LogEntry.xml
+Writing online XML to file: Manager.xml
+Writing online XML to file: EthernetSwitchPort.xml
+Writing online XML to file: EventService.xml
+Writing online XML to file: ManagerCollection.xml
+Writing online XML to file: EthernetSwitchONU.xml
+Writing online XML to file: SerialInterfaceCollection.xml
+Writing online XML to file: Memory.xml
+Writing online XML to file: EthernetSwitch.xml
+Writing online XML to file: Processor.xml
+Writing online XML to file: VLanNetworkInterfaceCollection.xml
+Writing online XML to file: Chassis.xml
+Writing online XML to file: Org.OData.Core.V1.xml
+Writing online XML to file: StorageCollection.xml
+Writing online XML to file: EthernetInterfaceCollection.xml
+Writing online XML to file: ProcessorCollection.xml
+Writing online XML to file: EthernetSwitchStaticMACCollection.xml
+Writing online XML to file: EthernetSwitchCollection.xml
+Writing online XML to file: EthernetInterface.xml
+Writing online XML to file: ComputerSystemCollection.xml
+Writing online XML to file: ServiceRoot.xml
+Writing online XML to file: ComputerSystem.xml
+Writing online XML to file: Thermal.xml
+Writing online XML to file: Session.xml
+Writing online XML to file: VolumeCollection.xml
+Writing online XML to file: Role.xml
+Writing online XML to file: Storage.xml
+Writing online XML to file: RedfishExtensions.xml
+Writing online XML to file: IntelRackScaleOem.xml
+Writing online XML to file: LogService.xml
+Writing online XML to file: LogServiceCollection.xml
+Writing online XML to file: ManagerAccountCollection.xml
+Writing online XML to file: Power.xml
+Writing online XML to file: Resource.xml
+Writing online XML to file: LogEntryCollection.xml
+Writing online XML to file: ManagerNetworkProtocol.xml
+Writing online XML to file: RoleCollection.xml
+Writing online XML to file: SessionCollection.xml
+Writing online XML to file: AccountService.xml
+Writing online XML to file: EthernetSwitchPortCollection.xml
+Writing online XML to file: EthernetSwitchACLCollection.xml
+Writing online XML to file: EthernetSwitchONUCollection.xml
+Writing online XML to file: ManagerAccount.xml
+Writing online XML to file: MessageRegistryFile.xml
+Writing online XML to file: SerialInterface.xml
+Writing online XML to file: MemoryCollection.xml
+Writing online XML to file: MessageRegistryFileCollection.xml
+Writing online XML to file: EventDestination.xml
+Writing online XML to file: SessionService.xml
+Writing online XML to file: ChassisCollection.xml
+Writing online XML to file: EventDestinationCollection.xml
+Writing online XML to file: PrivilegeRegistry.xml
+Writing online XML to file: Drive.xml
+Redfish Version of Service: 1.0.2
+ConfigURI: 172.17.8.6:8888
+System Info: No desc
+authtype: Basic
+cachefilepath: ./cache
+cachemode: Off
+certificatecheck: False
+configuri: https://172.17.8.6:8888
+debug_logging: True
+forceauth: True
+linklimit: {'LogEntry': 20}
+localonlymode: False
+logpath: /home/voltha/workspace/GPON/5_RF_Auto_Test/logs/
+metadatafilepath: ./SchemaFiles/metadata
+oemcheck: True
+preferonline: False
+sample: 0
+schemasuffix: _v1.xml
+servicemode: False
+timeout: 30
+uricheck: False
+username: admin
+usessl: True
+Start time: 06/05/20 - 09:58:43
+
+*** /redfish/v1/
+Writing online XML to file: FabricCollection.xml
+Writing online XML to file: ComposedNodeCollection.xml
+Writing online XML to file: TaskService.xml
+Writing online XML to file: JsonSchemaFileCollection.xml
+Writing online XML to file: StorageServiceCollection.xml
+	 Type (#ServiceRoot.v1_1_1.ServiceRoot), GET SUCCESS (time: 0.027419)
+Oem.Intel_RackScale.EthernetSwitches not defined in schema Intel.Oem (check version, spelling and casing)
+	 PASS
+
+*** /redfish/v1/Registries
+	 Type (#MessageRegistryFileCollection.MessageRegistryFileCollection), GET SUCCESS (time: 0.026556)
+	 PASS
+
+*** /redfish/v1/Registries/1
+	 Type (#MessageRegistryFile.v1_0_0.MessageRegistryFile), GET SUCCESS (time: 0.033621)
+	 PASS
+
+*** /redfish/v1/Registries/2
+	 Type (#MessageRegistryFile.v1_0_0.MessageRegistryFile), GET SUCCESS (time: 0.021951)
+	 PASS
+
+*** /redfish/v1/Registries/PrivilegeRegistry
+No such reference Privileges.v1_0_0 in localFile:./SchemaFiles/metadata/PrivilegeRegistry.xml, using unversioned
+Writing online XML to file: Privileges.xml
+	 Type (#PrivilegeRegistry.v1_0_0.PrivilegeRegistry), GET SUCCESS (time: 0.029963)
+	 PASS
+
+*** /redfish/v1/Systems
+	 Type (#ComputerSystemCollection.ComputerSystemCollection), GET SUCCESS (time: 0.027804)
+	 PASS
+
+*** /redfish/v1/Systems/1
+Writing online XML to file: NetworkInterfaceCollection.xml
+Writing online XML to file: PCIeDevice.xml
+Writing online XML to file: PCIeFunction.xml
+Writing online XML to file: Endpoint.xml
+Writing online XML to file: SimpleStorageCollection.xml
+	 Type (#ComputerSystem.v1_3_0.ComputerSystem), GET SUCCESS (time: 0.042008)
+	 PASS
+
+*** /redfish/v1/Systems/1/Memory
+	 Type (#MemoryCollection.MemoryCollection), GET SUCCESS (time: 0.046811)
+	 PASS
+
+*** /redfish/v1/Systems/1/Memory/1
+	 Type (#Memory.v1_1_0.Memory), GET SUCCESS (time: 0.02531)
+	 PASS
+
+*** /redfish/v1/Systems/1/Memory/2
+	 Type (#Memory.v1_1_0.Memory), GET SUCCESS (time: 0.024517)
+	 PASS
+
+*** /redfish/v1/Systems/1/Storage
+	 Type (#StorageCollection.StorageCollection), GET SUCCESS (time: 0.024779)
+	 PASS
+
+*** /redfish/v1/Systems/1/Storage/1
+Writing online XML to file: Redundancy.xml
+	 Type (#Storage.v1_1_0.Storage), GET SUCCESS (time: 0.025355)
+	 PASS
+
+*** /redfish/v1/Chassis/1/Drives/1
+Writing online XML to file: Volume.xml
+	 Type (#Drive.v1_1_1.Drive), GET SUCCESS (time: 0.024127)
+Model: Empty string found - Services should omit properties if not supported
+	 PASS
+
+*** /redfish/v1/Systems/1/Storage/1/Volumes
+	 Type (#VolumeCollection.VolumeCollection), GET SUCCESS (time: 0.024907)
+	 PASS
+
+*** /redfish/v1/Systems/1/Processors
+	 Type (#ProcessorCollection.ProcessorCollection), GET SUCCESS (time: 0.067914)
+	 PASS
+
+*** /redfish/v1/Systems/1/Processors/1
+	 Type (#Processor.v1_0_0.Processor), GET SUCCESS (time: 0.226566)
+	 PASS
+
+*** /redfish/v1/Chassis
+	 Type (#ChassisCollection.ChassisCollection), GET SUCCESS (time: 0.023975)
+	 PASS
+
+*** /redfish/v1/Chassis/1
+Writing online XML to file: ThermalZoneCollection.xml
+Writing online XML to file: PowerZoneCollection.xml
+	 Type (#Chassis.v1_3_0.Chassis), GET SUCCESS (time: 0.024833)
+	 PASS
+
+*** /redfish/v1/Chassis/1/Thermal
+	 Type (#Thermal.v1_1_0.Thermal), GET SUCCESS (time: 0.030027)
+	 PASS
+
+*** /redfish/v1/Chassis/1/Power
+	 Type (#Power.v1_1_0.Power), GET SUCCESS (time: 0.024858)
+	 PASS
+
+*** /redfish/v1/Managers
+	 Type (#ManagerCollection.ManagerCollection), GET SUCCESS (time: 0.024301)
+	 PASS
+
+*** /redfish/v1/Managers/1
+Writing online XML to file: StorageService.xml
+Writing online XML to file: VirtualMediaCollection.xml
+	 Type (#Manager.v1_0_0.Manager), GET SUCCESS (time: 0.027544)
+	 PASS
+
+*** /redfish/v1/Managers/1/EthernetInterfaces
+	 Type (#EthernetInterfaceCollection.EthernetInterfaceCollection), GET SUCCESS (time: 0.025674)
+	 PASS
+
+*** /redfish/v1/Managers/1/EthernetInterfaces/1
+No such reference IPAddresses in localFile:./SchemaFiles/metadata/EthernetInterface.xml
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetInterface.v1_4_0.EthernetInterface IPAddresses IPv6StaticDefaultGateways
+Writing online XML to file: IPAddresses.xml
+No such reference Chassis in /redfish/v1/metadata/EthernetInterface.xml
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetInterface.v1_3_0.Links Chassis Chassis
+No such reference HostInterface in /redfish/v1/metadata/EthernetInterface.xml
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetInterface.v1_2_0.Links HostInterface HostInterface
+Writing online XML to file: VLanNetworkInterface.xml
+	 Type (#EthernetInterface.v1_4_0.EthernetInterface), GET SUCCESS (time: 0.129658)
+	 PASS
+
+*** /redfish/v1/Managers/1/SerialInterfaces
+	 Type (#SerialInterfaceCollection.SerialInterfaceCollection), GET SUCCESS (time: 0.024493)
+	 PASS
+
+*** /redfish/v1/Managers/1/SerialInterfaces/1
+	 Type (#SerialInterface.v1_0_2.SerialInterface), GET SUCCESS (time: 0.026894)
+	 PASS
+
+*** /redfish/v1/Managers/1/NetworkProtocol
+	 Type (#ManagerNetworkProtocol.v1_0_2.ManagerNetworkProtocol), GET SUCCESS (time: 0.116376)
+	 PASS
+
+*** /redfish/v1/Managers/1/LogServices
+	 Type (#LogServiceCollection.LogServiceCollection), GET SUCCESS (time: 0.026866)
+	 PASS
+
+*** /redfish/v1/Managers/1/LogServices/1
+	 Type (#LogService.v1_0_0.LogService), GET SUCCESS (time: 0.077216)
+	 PASS
+
+*** /redfish/v1/Managers/1/LogServices/1/Entries
+	 Type (#LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0.045928)
+	 PASS
+
+*** /redfish/v1/SessionService
+	 Type (#SessionService.v1_0_0.SessionService), GET SUCCESS (time: 0.024507)
+	 PASS
+
+*** /redfish/v1/SessionService/Sessions
+	 Type (#SessionCollection.SessionCollection), GET SUCCESS (time: 0.023819)
+	 PASS
+
+*** /redfish/v1/AccountService
+	 Type (#AccountService.v1_0_0.AccountService), GET SUCCESS (time: 0.023629)
+	 PASS
+
+*** /redfish/v1/AccountService/Accounts
+	 Type (#ManagerAccountCollection.ManagerAccountCollection), GET SUCCESS (time: 0.026822)
+	 PASS
+
+*** /redfish/v1/AccountService/Accounts/ReadOnlyUser1
+	 Type (#ManagerAccount.v1_0_0.ManagerAccount), GET SUCCESS (time: 0.027656)
+	 PASS
+
+*** /redfish/v1/AccountService/Accounts/admin
+	 Type (#ManagerAccount.v1_0_0.ManagerAccount), GET SUCCESS (time: 0.02602)
+Name: Empty string found - Services should omit properties if not supported
+	 PASS
+
+*** /redfish/v1/AccountService/Roles
+	 Type (#RoleCollection.RoleCollection), GET SUCCESS (time: 0.026057)
+	 PASS
+
+*** /redfish/v1/AccountService/Roles/1
+	 Type (#Role.v1_0_0.Role), GET SUCCESS (time: 0.027748)
+Name: Empty string found - Services should omit properties if not supported
+	 PASS
+
+*** /redfish/v1/AccountService/Roles/2
+	 Type (#Role.v1_0_0.Role), GET SUCCESS (time: 0.024116)
+Name: Empty string found - Services should omit properties if not supported
+	 PASS
+
+*** /redfish/v1/AccountService/Roles/3
+	 Type (#Role.v1_0_0.Role), GET SUCCESS (time: 0.026865)
+Name: Empty string found - Services should omit properties if not supported
+	 PASS
+
+*** /redfish/v1/EventService
+Writing online XML to file: Event.xml
+	 Type (#EventService.v1_0_0.EventService), GET SUCCESS (time: 0.024182)
+	 PASS
+
+*** /redfish/v1/EventService/Subscriptions
+	 Type (#EventDestinationCollection.EventDestinationCollection), GET SUCCESS (time: 0.02525)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1
+SchemaURI /redfish/v1/metadata/EthernetSwitchMetrics.xml was unable to be called, defaulting to local storage in ./SchemaFiles/metadata
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitch.v1_1_0.EthernetSwitch EthernetSwitchMetrics Metrics
+	 Type (#EthernetSwitch.v1_0_0.EthernetSwitch), GET SUCCESS (time: 0.027331)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports
+	 Type (#EthernetSwitchPortCollection.EthernetSwitchPortCollection), GET SUCCESS (time: 0.032835)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/1
+SchemaURI /redfish/v1/metadata/EthernetSwitchPortMetrics.xml was unable to be called, defaulting to local storage in ./SchemaFiles/metadata
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+Writing online XML to file: EthernetSwitchACL.xml
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.058671)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/1/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031032)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/1/ONUs
+	 Type (#EthernetSwitchONUCollection.EthernetSwitchONUCollection), GET SUCCESS (time: 0.02469)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/1/ONUs/1
+	 Type (#EthernetSwitchONU.v1_0_0.EthernetSwitchONU), GET SUCCESS (time: 0.023986)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/1/StaticMACs
+Writing online XML to file: EthernetSwitchStaticMAC.xml
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031465)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/2
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.030141)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/2/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032844)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/2/ONUs
+	 Type (#EthernetSwitchONUCollection.EthernetSwitchONUCollection), GET SUCCESS (time: 0.02656)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/2/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029767)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/3
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.025391)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/3/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030002)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/3/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029536)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/4
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026136)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/4/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030658)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/4/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030678)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/5
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024212)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/5/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033413)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/5/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031968)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/6
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026099)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/6/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.03289)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/6/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030902)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/7
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026092)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/7/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.078027)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/7/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030252)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/8
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024081)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/8/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.034912)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/8/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030385)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/9
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027294)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/9/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033584)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/9/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.047976)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/10
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026772)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/10/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.071789)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/10/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030384)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/11
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.025102)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/11/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.072945)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/11/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.033233)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/12
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.025861)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/12/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031348)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/12/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029457)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/13
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02394)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/13/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033617)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/13/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032479)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/14
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02634)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/14/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030676)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/14/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029775)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/15
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026178)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/15/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032363)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/15/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.033279)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/16
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024249)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/16/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.084217)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/16/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032576)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/17
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027462)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/17/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032884)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/17/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030717)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/18
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.029139)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/18/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.073322)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/18/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032183)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/19
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027502)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/19/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.083211)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/19/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030037)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/20
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.025167)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/20/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032351)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/20/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032692)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/21
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024948)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/21/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032134)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/21/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029343)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/22
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.025542)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/22/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.057028)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/22/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030612)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/23
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026209)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/23/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.08016)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/23/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032518)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/24
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02774)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/24/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031183)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/24/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030543)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/25
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02819)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/25/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.077149)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/25/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031505)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/26
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027922)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/26/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.081831)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/26/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031284)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/27
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02841)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/27/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.083094)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/27/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031859)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/28
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026621)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/28/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.053835)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/28/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031925)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/29
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02698)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/29/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.082103)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/29/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030904)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/30
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028244)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/30/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032501)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/30/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032804)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/31
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026885)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/31/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.064555)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/31/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032984)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/32
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.029357)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/32/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032276)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/32/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.05133)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/33
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.029319)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/33/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032925)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/33/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.051054)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/34
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028199)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/34/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.036345)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/34/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.03121)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/35
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028548)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/35/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033353)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/35/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.03244)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/36
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026846)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/36/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032749)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/36/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.052546)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/37
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.050503)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/37/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031271)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/37/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.03238)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/38
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024928)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/38/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.072255)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/38/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030493)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/39
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028217)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/39/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032257)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/39/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031217)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/40
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026658)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/40/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033177)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/40/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029298)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/41
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.072459)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/41/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033364)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/41/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.027912)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/42
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027319)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/42/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033205)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/42/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030885)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/43
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026467)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/43/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031365)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/43/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031095)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/44
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027765)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/44/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032151)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/44/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029943)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/45
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.078981)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/45/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031538)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/45/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029736)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/46
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024785)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/46/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.03242)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/46/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032298)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/47
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.029524)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/47/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031578)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/47/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.02943)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/48
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026616)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/48/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.034222)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/48/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.033145)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/49
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028135)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/49/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.034263)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/49/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.049381)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/50
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028142)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/50/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032533)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/50/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.054223)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/51
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026885)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/51/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031001)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/51/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029953)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/52
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027934)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/52/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.081679)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/52/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.034011)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/53
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028762)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/53/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032041)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/53/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031347)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/54
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028555)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/54/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.07478)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/54/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.034905)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/55
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.030072)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/55/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031489)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/55/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.033048)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/56
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028819)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/56/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032151)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/56/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.047213)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/57
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.024236)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/57/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.053589)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/57/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032325)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/58
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.045479)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/58/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.079918)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/58/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.033608)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/59
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027955)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/59/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030201)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/59/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030724)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/60
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02907)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/60/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032133)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/60/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.051171)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/61
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.043296)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/61/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.03332)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/61/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030627)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/62
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027468)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/62/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031195)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/62/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032383)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/63
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026211)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/63/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031132)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/63/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030434)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/64
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026973)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/64/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032798)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/64/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.033502)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/65
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028597)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/65/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031578)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/65/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.030958)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/66
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.031233)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/66/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030066)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/66/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032561)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/67
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.028074)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/67/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.031271)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/67/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.050661)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/68
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.029718)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/68/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032822)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/68/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.054518)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/69
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.027426)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/69/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.064883)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/69/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032365)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/70
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.029038)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/70/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.063304)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/70/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.032146)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/71
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.026494)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/71/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.032496)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/71/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.045773)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/72
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.02772)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/72/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.033136)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/72/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.03252)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/73
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.070007)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/73/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030131)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/73/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.029662)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/74
+getPropertyDetails: Could not acquire appropriate Schema for this item, EthernetSwitchPort.v1_1_0.EthernetSwitchPort EthernetSwitchPortMetrics Metrics
+	 Type (#EthernetSwitchPort.v1_0_0.EthernetSwitchPort), GET SUCCESS (time: 0.031792)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/74/VLANs
+	 Type (#VLanNetworkInterfaceCollection.VLanNetworkInterfaceCollection), GET SUCCESS (time: 0.030618)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/Ports/74/StaticMACs
+	 Type (#EthernetSwitchStaticMACCollection.EthernetSwitchStaticMACCollection), GET SUCCESS (time: 0.031424)
+	 PASS
+
+*** /redfish/v1/EthernetSwitches/1/ACLs
+	 Type (#EthernetSwitchACLCollection.EthernetSwitchACLCollection), GET SUCCESS (time: 0.033305)
+	 PASS
+Elapsed time: 0:00:38
+Counter({'pass': 3226, 'skipOptional': 735, 'passGet': 270, 'metadataNamespaces': 84, 'warningPresent': 83, 'serviceNamespaces': 71, 'repeat': 23, 'invalidPropertyValue': 5, 'passAction': 4, 'optionalAction': 2, 'unverifiedComplexAdditional': 1, 'reflink': 1})
+Validation has succeeded.
+#(CST) 2020/06/05 09:59:22.837626 -   39.852369 - Executing: post(u'/redfish/v1/SessionService/', body={u'SessionTimeout': 600, u'ServiceEnabled': True}, valid_status_codes=u'[200]')
+| PASS |
+------------------------------------------------------------------------------
+Redfish.6 Dmtf Tools.Redfish Service Validator :: Test PSME using ... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Redfish.6 Dmtf Tools                                                  | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Redfish                                                               | FAIL |
+37 critical tests, 35 passed, 2 failed
+37 tests total, 35 passed, 2 failed
+==============================================================================
+Output:  /home/voltha/workspace/GPON/5_RF_Auto_Test/output.xml
+Log:     /home/voltha/workspace/GPON/5_RF_Auto_Test/log.html
+Report:  /home/voltha/workspace/GPON/5_RF_Auto_Test/report.html
+[5_RF_Auto_Test] $ /bin/sh -xe /tmp/jenkins2063406010453006741.sh
++ cp log.html report.html RF_TEST_REPORT
++ cp logs/ConformanceHtmlLog_06_05_2020_095843.html logs/ConformanceLog_06_05_2020_095843.txt RF_TEST_REPORT
+SSH: Connecting from host [voltha-build-p60]
+SSH: Connecting with configuration [TFTP-SERVER] ...
+SSH: EXEC: STDOUT/STDERR from command [pwd;cd tftp/Daily_Build/asgvolt64/2020-2-11;ls] ...
+/home/kai
+RF_TEST_REPORT
+SSH: EXEC: completed after 206 ms
+SSH: Disconnecting configuration [TFTP-SERVER] ...
+SSH: Transferred 3 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+Robot results publisher started...
+-Parsing output xml:
+Done!
+-Copying log files to build dir:
+Done!
+-Assigning results to build:
+Done!
+-Checking thresholds:
+Done!
+Done publishing Robot results.
+Finished: SUCCESS

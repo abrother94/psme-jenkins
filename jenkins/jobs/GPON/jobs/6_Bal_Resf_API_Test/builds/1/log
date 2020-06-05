@@ -1,0 +1,109 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4Ev43DNMMd8HB6iESOCWWrJsG1ZHlunZXERSefTRhUQ1AAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MwMAV180XNgAAAA=[0mBuild_Server_172.17.10.60 (ONL) in workspace /home/voltha/workspace/GPON/6_Bal_Resf_API_Test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[SSH] script:
+
+#!/bin/bash
+service psme stop
+sleep 1
+service psme start
+/etc/init.d/dev_mgmt stop
+sleep 2
+cd /opt/bcm68620/
+./svk_init.sh
+/etc/init.d/dev_mgmt start
+sleep 30
+
+[SSH] executing...
+Stopping daemon server: psme-rest-server\nStopping daemon server: psme-chassis\nStarting daemon server: psme-rest-server \nStarting daemon server: psme-chassis \nStopping 'dev_mgmt_daemon'... done
+Starting 'dev_mgmt_daemon'... done
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[6_Bal_Resf_API_Test] $ /bin/sh -xe /tmp/jenkins306608108469743583.sh
++ rm -rf RF_Auto_Test
++ git clone https://github.com/abrother94/RF_Auto_Test.git
+Cloning into 'RF_Auto_Test'...
++ cd RF_Auto_Test/bal_test
++ ./eit.sh GPON 1
+GPON Testing
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: 
+==============================================================================
+Bal Test                                                                      
+==============================================================================
+#(CST) 2020/06/05 10:07:34.998656 -    0.219561 - Executing: get(u'/redfish/v1/')
+[ ERROR ] Error in file '/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish_resource.robot': Initializing test library 'bmc_redfish' with arguments [ https://:8888 | admin | redfish ] failed: RetriesExhaustedError
+Traceback (most recent call last):
+  File "/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish.py", line 41, in __init__
+    super(bmc_redfish, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/redfish/rest/v1.py", line 952, in __init__
+    max_retry=max_retry)
+  File "/usr/local/lib/python2.7/dist-packages/redfish/rest/v1.py", line 422, in __init__
+    self.get_root_object()
+  File "/usr/local/lib/python2.7/dist-packages/redfish/rest/v1.py", line 553, in get_root_object
+    raise excp
+[ ERROR ] Error in file '/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish_resource.robot': Initializing test library 'bmc_redfish_utils' with no arguments failed: No library 'redfish' found.
+Traceback (most recent call last):
+  File "/home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/lib/bmc_redfish_utils.py", line 19, in __init__
+    self._redfish_ = BuiltIn().get_library_instance('redfish')
+  File "/usr/local/lib/python2.7/dist-packages/robot/libraries/BuiltIn.py", line 3258, in get_library_instance
+    raise RuntimeError(unic(err))
+Bal Test.Test Bal :: Test BAL Rstful functionality.                           
+==============================================================================
+Verify Restful API for BAL Test :: Test BAL Restful Status            | FAIL |
+Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.
+------------------------------------------------------------------------------
+Verify Restful API for ONU Range Test :: Test ONU Range               | FAIL |
+Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.
+------------------------------------------------------------------------------
+Verify Restful API for flow add :: Test flow add                      | FAIL |
+Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.
+------------------------------------------------------------------------------
+Verify Restful API for omci send :: Test omci send                    | FAIL |
+Setup failed:
+No keyword with name 'redfish.Login' found.
+
+Also teardown failed:
+No keyword with name 'redfish.Logout' found.
+------------------------------------------------------------------------------
+Bal Test.Test Bal :: Test BAL Rstful functionality.                   | FAIL |
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Bal Test                                                              | FAIL |
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Output:  /home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/bal_test/output.xml
+Log:     /home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/bal_test/log.html
+Report:  /home/voltha/workspace/GPON/6_Bal_Resf_API_Test/RF_Auto_Test/bal_test/report.html
+Build step 'Execute shell' marked build as failure
+Robot results publisher started...
+-Parsing output xml:
+Done!
+-Copying log files to build dir:
+Done!
+-Assigning results to build:
+Done!
+-Checking thresholds:
+Done!
+Done publishing Robot results.
+Finished: FAILURE

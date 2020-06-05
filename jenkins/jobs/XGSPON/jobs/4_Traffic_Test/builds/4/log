@@ -1,0 +1,63 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4Ev43DNMMd8HB6iESOCWWrJsG1ZHlunZXERSefTRhUQ1AAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MwMAV180XNgAAAA=[0mBuild_Server_172.17.10.60 (ONL) in workspace /home/voltha/workspace/XGSPON/4_Traffic_Test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential 4f601890-1338-41ea-913a-33a98efd3251
+Cloning the remote Git repository
+Cloning repository https://github.com/abrother94/Traffic_Test/
+ > git init /home/voltha/workspace/XGSPON/4_Traffic_Test # timeout=10
+Fetching upstream changes from https://github.com/abrother94/Traffic_Test/
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/abrother94/Traffic_Test/ +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/abrother94/Traffic_Test/ # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/abrother94/Traffic_Test/ # timeout=10
+Fetching upstream changes from https://github.com/abrother94/Traffic_Test/
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/abrother94/Traffic_Test/ +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 6dd546bba47c5b43550fe81656912f13e6be2297 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6dd546bba47c5b43550fe81656912f13e6be2297 # timeout=10
+Commit message: "Add content"
+ > git rev-list --no-walk 6dd546bba47c5b43550fe81656912f13e6be2297 # timeout=10
+[SSH] script:
+
+#!/bin/bash
+#Disable GPON NNI PORT
+cd Traffic_Test/
+curl --insecure  -v  -X PATCH -d '{"AdministrativeState" : "Down"}'  https://172.17.8.6:8888/redfish/v1/EthernetSwitches/1/Ports/65/
+`./ping_test.sh 192.168.1.78`
+RES=`echo $?`
+if [ "$RES" == 0 ];then
+    echo "PASS"
+    exit 0
+else
+    echo "FAIL"
+    exit 1
+fi
+
+
+
+[SSH] executing...
+* Expire in 0 ms for 6 (transfer 0x25a880)
+*   Trying 172.17.8.6...
+* TCP_NODELAY set
+* Expire in 200 ms for 4 (transfer 0x25a880)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* connect to 172.17.8.6 port 8888 failed: Connection refused
+* Failed to connect to 172.17.8.6 port 8888: Connection refused
+* Closing connection 0
+curl: (7) Failed to connect to 172.17.8.6 port 8888: Connection refused
+FAIL
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Build step 'Execute shell script on remote host using ssh' marked build as failure
+Finished: FAILURE

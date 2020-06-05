@@ -1,0 +1,195 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4L6V7XeU4+9YwROGfPXRu+CYeBQWZtYJ4FQli4hUl+igAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MxMATptZW9gAAAA=[0mBuild_Server_172.17.10.64 in workspace /home/voltha/workspace/GPON/3_Install_Bal_Psme
+[3_Install_Bal_Psme] $ /bin/bash /tmp/jenkins5790222496064458192.sh
+99
+98
+97
+96
+95
+94
+93
+92
+91
+90
+89
+88
+87
+86
+85
+84
+83
+82
+81
+80
+79
+78
+77
+76
+75
+74
+73
+72
+71
+70
+69
+68
+67
+66
+65
+64
+63
+62
+61
+60
+59
+58
+57
+56
+55
+54
+53
+52
+51
+50
+49
+48
+47
+46
+45
+44
+43
+42
+41
+40
+39
+38
+37
+36
+35
+34
+33
+32
+31
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+[SSH] script:
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+MDATE="2020-06-04-PM-01-04-asgvolt64-3.4.5.5-2.1.3.59.25-72b95a7"
+ONL_ID="72b95a7"
+BAL_SDK_VER="3.4.5.5"
+PSME_VER="2.1.3.59.25"
+PLTFORM="asgvolt64"
+
+#!/bin/bash
+#Above IP need modify to DUT's IP address
+echo "ONL_COMMIT_ID[$ONL_ID]"
+echo "PLTFORM[$PLTFORM]"
+echo "PSME_VER[$PSME_VER]"
+echo "BAL_SDK_VER[$BAL_SDK_VER]"
+echo "MDATE[$MDATE]"
+
+cd /
+##Remove exist deamon or server ##
+ntpdate -s time.stdtime.gov.tw
+tar zxvf release_*.tar.gz
+dpkg -i psme_allinone*.deb
+update-rc.d psme defaults
+cp  /libbal_host_api.so  /lib/
+cp  /libbal_host_api.so  /usr/local/lib/
+service psme start
+
+# Insert BAL kernel module every time before startup.
+sed -i '/^exit 0/i \/opt\/bcm68620\/svk_init.sh' /etc/rc.local
+
+# Use dhcp client to get IP address.
+sed -i '/^exit 0/i dhclient ma1' /etc/rc.local 
+
+# GPON NNI PORTs set to 40G
+cd /broadcom/
+sed -i 's/setenv port_speed_for_100 100000/setenv port_speed_for_100 40000/g' port_speed.soc
+
+#ONU ID
+#sed -i 's/71E80110/428DA323/g' /broadcom/onu_cfg
+sed -i 's/71E83268/428DA323/g' /broadcom/onu_cfg
+
+cd /opt/bcm68620/
+./svk_init.sh
+
+cd /broadcom/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/broadcom
+nohup  ./dev_mgmt_daemon -d -pcie < /dev/null > /dev/null 2>&1 &
+sleep 10
+cd /broadcom/
+nohup  ./unittest_psme-chassis_acc_api_bal_dist_test  < /dev/null > /dev/null 2>&1 &
+c=180
+#c=1
+while [ $c != 0 ];do
+    c=$(($c-1))
+    sleep 1
+    echo $c
+done
+exit 0
+
+[SSH] executing...
+[SSH] Exception:java.net.NoRouteToHostException: No route to host (Host unreachable)
+com.jcraft.jsch.JSchException: java.net.NoRouteToHostException: No route to host (Host unreachable)
+	at com.jcraft.jsch.Util.createSocket(Util.java:349)
+	at com.jcraft.jsch.Session.connect(Session.java:215)
+	at org.jvnet.hudson.plugins.CredentialsSSHSite.createSession(CredentialsSSHSite.java:132)
+	at org.jvnet.hudson.plugins.CredentialsSSHSite.executeCommand(CredentialsSSHSite.java:208)
+	at org.jvnet.hudson.plugins.SSHBuilder.perform(SSHBuilder.java:104)
+	at hudson.plugins.build_timeout.BuildStepWithTimeout.perform(BuildStepWithTimeout.java:97)
+	at hudson.plugins.build_timeout.BuildStepWithTimeout.perform(BuildStepWithTimeout.java:73)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:741)
+	at hudson.model.Build$BuildExecution.build(Build.java:206)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:504)
+	at hudson.model.Run.execute(Run.java:1816)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+Caused by: java.net.NoRouteToHostException: No route to host (Host unreachable)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.jcraft.jsch.Util.createSocket(Util.java:343)
+	... 15 more
+Build step 'Run with timeout' marked build as failure
+Finished: FAILURE

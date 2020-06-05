@@ -12,7 +12,7 @@ curl -X POST &quot;http://voltha:11aad495d8f017648827a9c41468cd6c6e@172.17.10.60
           <name>ONL_ID</name>
           <description>ONL commit ID 
 &quot;master&quot; or &quot;72b95a7&quot; &quot;f0bcb23&quot;</description>
-          <defaultValue>f0bcb23</defaultValue>
+          <defaultValue>72b95a7</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -29,14 +29,14 @@ curl -X POST &quot;http://voltha:11aad495d8f017648827a9c41468cd6c6e@172.17.10.60
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>BAL_SDK_VER</name>
-          <description>BAL version 3.5.1.1 or 3.5.3.3</description>
-          <defaultValue>3.5.3.3</defaultValue>
+          <description>BAL version 3.5.1.1 or 3.5.3.3 ort 3.4.5.5</description>
+          <defaultValue>3.4.5.5</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MDATE</name>
           <description></description>
-          <defaultValue>2020-05-21-PM-12-00-$PLTFORM-$BAL_SDK_VER-$PSME_VER-$ONL_ID</defaultValue>
+          <defaultValue>2020-05-30-AM-00-39-$PLTFORM-$BAL_SDK_VER-$PSME_VER-$ONL_ID</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>

@@ -1,0 +1,423 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building remotely on [8mha:////4L6V7XeU4+9YwROGfPXRu+CYeBQWZtYJ4FQli4hUl+igAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/eT83ILSktQifafSzJyU+ODUorLUonhDcyM9Q3M9QwM9MxMATptZW9gAAAA=[0mBuild_Server_172.17.10.64 in workspace /home/voltha/workspace/XGSPON/3_Install_Bal_Psme
+[3_Install_Bal_Psme] $ /bin/bash /tmp/jenkins5247289954112175292.sh
+99
+98
+97
+96
+95
+94
+93
+92
+91
+90
+89
+88
+87
+86
+85
+84
+83
+82
+81
+80
+79
+78
+77
+76
+75
+74
+73
+72
+71
+70
+69
+68
+67
+66
+65
+64
+63
+62
+61
+60
+59
+58
+57
+56
+55
+54
+53
+52
+51
+50
+49
+48
+47
+46
+45
+44
+43
+42
+41
+40
+39
+38
+37
+36
+35
+34
+33
+32
+31
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+[SSH] script:
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+MDATE="2020-05-30-AM-00-39-asfvolt16-3.4.5.5-2.1.3.59.25-72b95a7"
+ONL_ID="72b95a7"
+BAL_SDK_VER="3.4.5.5"
+PSME_VER="2.1.3.59.25"
+PLTFORM="asfvolt16"
+
+#!/bin/bash
+#Above IP need modify to DUT's IP address
+echo "ONL_COMMIT_ID[$ONL_ID]"
+echo "PLTFORM[$PLTFORM]"
+echo "PSME_VER[$PSME_VER]"
+echo "BAL_SDK_VER[$BAL_SDK_VER]"
+echo "MDATE[$MDATE]"
+
+cd /
+##Remove exist deamon or server ##
+ntpdate -s time.stdtime.gov.tw
+tar zxvf release_*.tar.gz
+if [ "$?" != 0 ];then
+    echo "Cannot tar BAL packages"
+    exit 1
+fi
+
+dpkg -i psme_allinone*.deb
+if [ "$?" != 0 ];then
+    echo "Cannot install PSME deb packages"
+    exit 1
+fi
+
+update-rc.d psme defaults
+
+cp  /libbal_host_api.so  /lib/
+cp  /libbal_host_api.so  /usr/local/lib/
+if [ "$?" != 0 ];then
+    echo "Cannot copy libbal_host_api.so to lib!!"
+    exit 1
+fi
+
+service psme start
+
+# Insert BAL kernel module every time before startup.
+sed -i '/^exit 0/i \/opt\/bcm68620\/svk_init.sh' /etc/rc.local
+
+# Use dhcp client to get IP address.
+sed -i '/^exit 0/i dhclient ma1' /etc/rc.local 
+
+# XGPS PON NNI PORTs set to 40G
+sed -i 's/setenv port_speed_for_100 100000/setenv port_speed_for_100 40000/g' port_speed.soc
+
+
+cd /opt/bcm68620/
+./svk_init.sh
+
+cd /broadcom/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/broadcom
+nohup  ./dev_mgmt_daemon -d -pcie < /dev/null > /dev/null 2>&1 &
+sleep 10
+cd /broadcom/
+nohup  ./unittest_psme-chassis_acc_api_bal_dist_test  < /dev/null > /dev/null 2>&1 &
+c=180
+#c=1
+while [ $c != 0 ];do
+    c=$(($c-1))
+    sleep 1
+    echo $c
+done
+exit 0
+
+[SSH] executing...
+Error resolving time.stdtime.gov.tw: Name or service not known (-2)
+ONL_COMMIT_ID[72b95a7]
+PLTFORM[asfvolt16]
+PSME_VER[2.1.3.59.25]
+BAL_SDK_VER[3.4.5.5]
+MDATE[2020-05-30-AM-00-39-asfvolt16-3.4.5.5-2.1.3.59.25-72b95a7]
+./opt/
+./opt/bcm68620/
+./opt/bcm68620/os_linux.ko
+./opt/bcm68620/nltr.ko
+./opt/bcm68620/svk_init.sh
+./opt/bcm68620/ll_pcie.ko
+./opt/bcm68620/fld_linux.ko
+./opt/bcm68620/bcm68620_boot.bin
+./opt/bcm68620/bcm68620_appl.bin
+./opt/bcm68620/pcie_proxy.ko
+./opt/bcm68620/devmem.ko
+./broadcom/
+./broadcom/port.soc
+./broadcom/embedded_console
+./broadcom/bcm88470_board.soc
+./broadcom/topology_config.ini
+./broadcom/build_info.log
+./broadcom/daemon_attach
+./broadcom/linux-user-bde.ko
+./broadcom/bal_config.ini
+./broadcom/combo28_dram.soc
+./broadcom/libbal_core_real.3.4.5-6.5.13.so
+./broadcom/breakout_cable_port.soc
+./broadcom/reload.soc
+./broadcom/dev_mgmt_daemon
+./broadcom/topology_config_16_ports.ini
+./broadcom/qax.soc
+./broadcom/libbal_core.so
+./broadcom/dune.soc
+./broadcom/breakout_cable_config.soc
+./broadcom/example_user_appl_init
+./broadcom/port_speed.soc
+./broadcom/dnx.soc
+./broadcom/BCM88470_B0_0_dma_rst.srec
+./broadcom/asfx816bbx.hex
+./broadcom/dev_mgmt_attach
+./broadcom/linux-kernel-bde.ko
+./broadcom/rc.soc
+./broadcom/example_user_appl
+./etc/
+./etc/init.d/
+./etc/init.d/dev_mgmt_daemon_init
+Selecting previously unselected package psme-allinone.
+(Reading database ... 17762 files and directories currently installed.)
+Preparing to unpack psme_allinone_2.1.3.59.25-091483a_amd64.deb ...
+Unpacking psme-allinone (2.1.3.59.25) ...
+insserv: script dev_mgmt: service dev_mgmt_daemon already provided!
+Setting up psme-allinone (2.1.3.59.25) ...
+Starting daemon server: psme-rest-server \nsed: can't read port_speed.soc: No such file or directory
+Starting daemon server: psme-chassis \nInitializing BCM68620 SVK...
+Device Management Daemon over PCIE
+Loading PCIE proxy driver
+Topology setup complete
+179
+178
+177
+176
+175
+174
+173
+172
+171
+170
+169
+168
+167
+166
+165
+164
+163
+162
+161
+160
+159
+158
+157
+156
+155
+154
+153
+152
+151
+150
+149
+148
+147
+146
+145
+144
+143
+142
+141
+140
+139
+138
+137
+136
+135
+134
+133
+132
+131
+130
+129
+128
+127
+126
+125
+124
+123
+122
+121
+120
+119
+118
+117
+116
+115
+114
+113
+112
+111
+110
+109
+108
+107
+106
+105
+104
+103
+102
+101
+100
+99
+98
+97
+96
+95
+94
+93
+92
+91
+90
+89
+88
+87
+86
+85
+84
+83
+82
+81
+80
+79
+78
+77
+76
+75
+74
+73
+72
+71
+70
+69
+68
+67
+66
+65
+64
+63
+62
+61
+60
+59
+58
+57
+56
+55
+54
+53
+52
+51
+50
+49
+48
+47
+46
+45
+44
+43
+42
+41
+40
+39
+38
+37
+36
+35
+34
+33
+32
+31
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[3_Install_Bal_Psme] $ /bin/bash /tmp/jenkins7998196916490573029.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Finished: SUCCESS

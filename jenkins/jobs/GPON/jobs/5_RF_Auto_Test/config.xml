@@ -69,7 +69,7 @@ This needs a well build ONL and BAL docker in env.</description>
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>Robot_PSME_Auto_Test</assignedNode>
+  <assignedNode>Robot_PSME_Auto_Test_60</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>

@@ -1,0 +1,19 @@
+Started by user [8mha:////4Pt1hBgSq+wJtsir1HvcQy7gYClQPzCAPcYowuK9+bTWAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9svyckoxEAAv9PVLBAAAA[0mvoltha
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/XGSPON/2_Install_Onl_Allinone_Package
+[SSH] script:
+
+#!/bin/bash
+#Above IP address need depend on your working OLT real IP address
+onl-onie-boot-mode uninstall
+reboot
+
+[SSH] executing...
+sh: onl-onie-boot-mode: not found
+sh: reboot: not found
+
+[SSH] completed
+[SSH] exit-status: 127
+
+Build step 'Execute shell script on remote host using ssh' marked build as failure
+Finished: FAILURE

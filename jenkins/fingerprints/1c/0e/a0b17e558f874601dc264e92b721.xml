@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-05-30 09:29:07.808 UTC</timestamp>
+  <md5sum>1c0ea0b17e558f874601dc264e92b721</md5sum>
+  <fileName>Credential id=4f601890-1338-41ea-913a-33a98efd3251 name=abrother94@gmail.com/******</fileName>
+  <usages>
+    <entry>
+      <string>GPON/5_RF_Auto_Test</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>XGSPON/4_Traffic_Test</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>GPON/4_Traffic_Test</string>
+      <ranges>1-2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

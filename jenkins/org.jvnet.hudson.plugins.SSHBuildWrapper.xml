@@ -82,5 +82,14 @@
       <timeout>0</timeout>
       <pty>false</pty>
     </org.jvnet.hudson.plugins.CredentialsSSHSite>
+    <org.jvnet.hudson.plugins.CredentialsSSHSite>
+      <hostname>172.17.8.6</hostname>
+      <username>root</username>
+      <port>22</port>
+      <credentialId>0f69aa23-b605-4a04-be00-ae1b386adfb9</credentialId>
+      <serverAliveInterval>0</serverAliveInterval>
+      <timeout>0</timeout>
+      <pty>false</pty>
+    </org.jvnet.hudson.plugins.CredentialsSSHSite>
   </sites>
 </org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl>

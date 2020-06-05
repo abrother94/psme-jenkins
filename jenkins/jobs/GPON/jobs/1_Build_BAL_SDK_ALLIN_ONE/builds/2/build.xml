@@ -1,0 +1,79 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>PLTFORM</name>
+          <description>GPON(asgvolt64) or XGSPON(asfvolt16)</description>
+          <value>asgvolt64</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>ONL_ID</name>
+          <description>ONL commit id 
+Stable version :72b95a7
+</description>
+          <value>72b95a7</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>PSME_VER</name>
+          <description>PSME Debian package version</description>
+          <value>2.1.3.59.25</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BAL_SDK_VER</name>
+          <description>BAL version</description>
+          <value>3.4.5.5</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>MDATE</name>
+          <description></description>
+          <value>2020-06-04-PM-01-04-asgvolt64-3.4.5.5-2.1.3.59.25-72b95a7</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>FIT</name>
+          <description>If you want only build Accton platform only, set it to &quot;True&quot;</description>
+          <value>False</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>Build_PSME_ONLY</name>
+          <description>Only build PSEM only, set it to &quot;True&quot;
+This needs a well build ONL and BAL docker in env.</description>
+          <value>False</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>PLTFORM</string>
+        <string>ONL_ID</string>
+        <string>PSME_VER</string>
+        <string>BAL_SDK_VER</string>
+        <string>MDATE</string>
+        <string>FIT</string>
+        <string>Build_PSME_ONLY</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>voltha</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>22</queueId>
+  <timestamp>1591246538366</timestamp>
+  <startTime>1591246538383</startTime>
+  <result>SUCCESS</result>
+  <duration>20953558</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>Build_Server_172.17.10.64</builtOn>
+  <workspace>/home/voltha/workspace/GPON/1_Build_BAL_SDK_ALLIN_ONE</workspace>
+  <hudsonVersion>2.190.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>
